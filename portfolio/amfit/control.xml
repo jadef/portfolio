@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portfolio>
+	<fulltitle>Amfit Diabtic Microsite</fulltitle>
+	<subtitle>(design and programming)</subtitle>
+	<link>http://www.amfitdiabetic.com/</link>
+	<slide id="1">
+		<description><![CDATA[
+		This is a microsite created for the diabetic line of <a href="http://www.amfit.com/">Amfit</a> inserts. I designed and programmed the site to be used as part of Amfit's campaign, educating their customers (Orthopedists and Pedorthists) about the new line of diabetic inserts while capturing new leads. The site is programmed with xhtml, css, and javascript (jquery).
+		 ]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Homepage</title>
+		<image>home.jpg</image>
+	</slide>
+	<slide id="2">
+		<description><![CDATA[
+		The dynamic calculator on the homepage uses javascript to create a simple way for the potential customer to learn if they could save money by using Amfit inserts.
+		 ]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Calculator</title>
+		<image>calculator.jpg</image>
+	</slide>
+	<slide id="3">
+		<description><![CDATA[
+		An important part of the microsite was a contact form for capturing leads.
+		 ]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Contact Page</title>
+		<image>contact.jpg</image>
+	</slide>
+	<slide id="4">
+		<description><![CDATA[
+		The contact form uses javascript validation to make sure the required fields are filled out correctly.
+		 ]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Validation</title>
+		<image>validation.jpg</image>
+	</slide>
+	<slide id="5">
+		<description><![CDATA[
+		The site is enhanced by the small details throughout. For example, slight clipping on the diabetic insert images and custom check boxes styled to retain the look of the form.
+		 ]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Details</title>
+		<image>details.jpg</image>
+	</slide>
+</portfolio>
