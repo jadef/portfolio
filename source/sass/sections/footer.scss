@@ -7,9 +7,9 @@ footer .email span {
   display: none;
 }
 .justfun {
-  color: #1c80a9;
+  color: $c-primary;
   font-size: 0.5555em;
-  text-shadow: 1px 1px 0 #daf6ff;
+  text-shadow: 1px 1px 0 $c-blue-light1;
 }
 .justfun span {
   font-family: FontAwesome;

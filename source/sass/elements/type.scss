@@ -5,11 +5,11 @@ caption, tbody, tfoot, thead, tr, th, td {
   margin: 0; padding: 0; border: 0;
 }
 html, button, input, select, textarea {
-    color: #3e3e3e;
+    color: $c-body;
   font-family: 'Source Sans Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 html {
-  background-color: #b4e9ff;
+  background-color: $c-background;
   font-size: 1.125em;
   font-weight: 300;
     line-height: 1.4em;
@@ -24,7 +24,7 @@ body {
 }
 hr {
   border: 0;
-  border-top: 1px solid #dedede;
+  border-top: 1px solid $c-gray-light;
   clear: both;
   display: block;
   height: 1px;
@@ -36,13 +36,13 @@ h1, h2 {
   line-height: 1.1em;
 }
 h2 {
-  color: #0f648a;
+  color: $c-blue-dark3;
   font-size: 1.6em;
   text-transform: lowercase;
   padding-bottom: 0.5em;
 }
 h3 {
-  color: #136a8f;
+  color: $c-secondary;
   font-size: 1em;
   text-transform: uppercase;
 }
@@ -85,11 +85,11 @@ video {
     vertical-align: middle;
 }
 a:link, a:active, a:visited {
-  color: #136a8f;
+  color: $c-secondary;
   text-decoration: underline;
 }
 a:hover, a:focus {
-  color: #eb9000;
+  color: $c-accent;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }

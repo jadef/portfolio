@@ -4,7 +4,7 @@
   margin-top: 60px;
 }
 #where section {
-  border-top: 1px solid #1b749a;
+  border-top: 1px solid $c-secondary;
   margin-top: 25px;
   padding-top: 25px;
 }
@@ -28,18 +28,18 @@
 
 // -- Where - important
 #where .important {
-  background-color: #1c80a9;
-  background: -moz-linear-gradient(top,  #217fa7 0%, #0d5e81 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217fa7), color-stop(100%,#0d5e81)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #217fa7 0%,#0d5e81 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #217fa7 0%,#0d5e81 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #217fa7 0%,#0d5e81 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #217fa7 0%,#0d5e81 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#217fa7', endColorstr='#0d5e81',GradientType=0 ); /* IE6-9 */
-  border-bottom: 4px solid #aed4e1;
-  -webkit-box-shadow: 2px 2px 6px 0 rgba(15,100,138,0.35);
-  box-shadow: 2px 2px 6px 0 rgba(15,100,138,0.35);
-  color: #ffffff;
+  background-color: $c-primary;
+  background: -moz-linear-gradient(top,  $c-blue1 0%, $c-blue-dark4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$c-blue1), color-stop(100%,$c-blue-dark4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $c-blue1 0%,$c-blue-dark4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-blue1', endColorstr='$c-blue-dark4',GradientType=0 ); /* IE6-9 */
+  border-bottom: 4px solid $c-blue-light2;
+  -webkit-box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
+  box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
+  color: $c-white;
   font-size: 1.125em;
   margin: -30px -30px 0 -30px;
   padding: 30px 30px;
@@ -57,16 +57,16 @@
   padding: 18px 0 20px 0;
 }
 #where .important .date {
-  background-color: #136a8f;
+  background-color: $c-secondary;
   font-weight: bold;
 }
 #where .important a:link,
 #where .important a:visited {
-  color: #aed4e1;
+  color: $c-blue-light2;
 }
 #where .important a:hover,
 #where .important a:focus {
-  color: #eb9000;
+  color: $c-accent;
 }
 
 // ----- 501px Break
@@ -81,7 +81,7 @@
     margin-left: 48%;
   }
   #where section.important {
-    border: 4px solid #aed4e1;
+    border: 4px solid $c-blue-light2;
     left: 0;
     margin: -20px 4px 0 -4px;
     overflow: visible;
@@ -113,11 +113,11 @@
     padding: 20px 0;
   }
   #where .date {
-    background-color: #aed4e1;
+    background-color: $c-blue-light2;
     margin: 0 -20px 30px -20px;
   }
   #where section.important {
-    border: 4px solid #aed4e1;
+    border: 4px solid $c-blue-light2;
     margin: -30px 4px -20px -4px;
     padding-bottom: 30px;
     position: relative;

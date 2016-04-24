@@ -2,14 +2,14 @@
 
 // Selection Coloring
 ::-moz-selection {
-    background: #eb9000;
-  color: #fff;
-    text-shadow: 2px 2px 0 #d78400;
+    background: $c-accent;
+  color: $c-white;
+    text-shadow: 2px 2px 0 $c-orange2;
 }
 ::selection {
-    background: #eb9000;
-  color: #fff;
-    text-shadow: 2px 2px 0 #d78400;
+    background: $c-accent;
+  color: $c-white;
+    text-shadow: 2px 2px 0 $c-orange2;
 }
 
 // global box-sizing
@@ -26,8 +26,8 @@
 
 // Browse Happy prompt
 .browsehappy {
-    background: #ccc;
-    color: #000;
+    background: $c-gray-light;
+    color: $c-black;
     padding: 20px 20px;
     position: absolute;
     text-align: center;

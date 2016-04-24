@@ -16,11 +16,11 @@ header,
 #where,
 #how,
 #education {
-  background-color: rgba(255,255,255,0.8);
-  border-top: 4px solid #aed4e1;
-  border-bottom: 4px solid #aed4e1;
-  -webkit-box-shadow: 2px 2px 6px 0 rgba(15,100,138,0.35);
-  box-shadow: 2px 2px 6px 0 rgba(15,100,138,0.35);
+  background-color: rgba($c-white,0.8);
+  border-top: 4px solid $c-blue-light2;
+  border-bottom: 4px solid $c-blue-light2;
+  -webkit-box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
+  box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
   padding: 30px 30px;
 }
 
@@ -38,7 +38,7 @@ header,
   #where,
   #how,
   #education {
-    border: 4px solid #aed4e1;
+    border: 4px solid $c-blue-light2;
     padding: 30px;
   }
   #intro {
