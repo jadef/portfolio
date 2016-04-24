@@ -33,21 +33,17 @@ Gulp will have been installed globally. You can initiate any gulp tasks from **t
 
 `$ gulp --dev`
 
-1. flush-cache via n98.magerun
-2. Starts livereload listener
-3. build js in **uncompressed** development mode into design package and creates a source-map file
-4. build css in **uncompressed** development mode into design package and creates a source-map file
-5. copy and compress images into design package
-6. watches the following files and runs flush-cache on changes
+1. build js in **uncompressed** development mode into design package and creates a source-map file
+2. copy and compress images into design package
+3. build css in **uncompressed** development mode into design package and creates a source-map file
+4. Starts livereload listener
+5. watches the following folders
 
-* ./public/app/design/frontend/**/*.xml
-* ./public/app/design/**/locale/**/*.csv
-* ./public/app/locale/**/*.csv
-* ./public/app/etc/**/*.xml
-* ./public/app/code/**/etc/*.xml
+* source/scripts
+* source/images
+* source/sass
 
-7. watches composer.lock and runs composer-install on changes
-8. keep watching for changes until stopped (by ctrl+c)
+6. keep watching for changes until stopped (by ctrl+c)
 
 
 ### Environment flag
@@ -57,20 +53,14 @@ Appending `--dev` on any task will save any appropriate js and css files in **un
 
 ### Watch Tasks
 
-`$ gulp` or `$ gulp --dev`: Default Magento build and watch described [above](#gulp).
-
-`$ gulp watch-css` or `$ gulp watch-css --dev`: Watches just sass files and updates on css compilation.
-
-`$ gulp styleguide` or `$ gulp styleguide --dev`: Watches both magento and styleguide source and builds styleguide css.
-
-`$ gulp wordpress` or `$ gulp wordpress --dev`: Build and watch styles in wordpress theme folder.
-
-`$ gulp all` or `$ gulp all --dev`: Build **All** the styles (Magento, Wordpress and styleguide).
+`$ gulp` or `$ gulp --dev`: Default build and watch described [above](#gulp).
 
 
 ### One Time Tasks
 
-`$ gulp build` or `$ gulp build --dev`: Build all Magento (js, images, css) and styleguide css one time.
+`$ gulp compile`: **Cleans** the existing public folders and builds all the (js, images, css) one time.
+
+`$ gulp build` or `$ gulp build --dev`: Build all (js, images, css) one time.
 
 `$ gulp -v`: Output gulp versions (locally and globally)
 
@@ -81,12 +71,12 @@ Appending `--dev` on any task will save any appropriate js and css files in **un
 
 ### JavaScript
 
-When *Gulp* is initiated or changes made when watching any js file saved in the `/public/source/frontend/yakima/default/js/` folder.
+When *Gulp* is initiated or changes made when watching any js file saved in the `source/scripts/` folder.
 
-All js will be concatinated into a single file: `/public/skin/frontend/yakima/default/js/site-scripts.js`
+All js will be concatinated into a single file: `public/scripts.js`
 
 ### Sass
 
-When *Gulp* is watching any Sass file saved in the `/public/source/frontend/yakima/default/sass/` folder.
+When *Gulp* is watching any Sass file saved in the `source/sass/` folder.
 
-All Sass will compile into two css files: `/public/skin/frontend/yakima/default/css/ie.css` and `/public/skin/frontend/yakima/default/css/styles.css`
+All Sass will compile into a single css file: `/public/main.css`

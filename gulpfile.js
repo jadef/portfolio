@@ -58,7 +58,7 @@ gulp.task('js', function(){
         .pipe(concat('scripts.js'))
         .pipe(isProduction ? uglify({mangle: false, preserveComments: 'some'}) : gutil.noop())
         .pipe(isProduction ? gutil.noop() : sourcemaps.write('.'))
-        .pipe(gulp.dest('public/scripts/'))
+        .pipe(gulp.dest('public/'))
         .on('error', function (error) {
             console.log(error);
         });
@@ -87,7 +87,7 @@ gulp.task('sass', function() {
         .pipe(compass({
             config_file: 'config.rb',
             sass: 'source/sass',
-            css: 'public/styles',
+            css: 'public/',
             style: sassStyle,
             sourcemap: sourceMap,
             comments: isProduction,
@@ -113,9 +113,9 @@ gulp.task('watch', ['build'], function() {
     //Watch SCSS and CSS for changes, compile compass and run livereload on change
     gulp.watch('source/sass/**/*.scss', ['sass']);
     gulp.watch('source/scripts/**/*.js', ['js']);
-    gulp.watch('public/scripts/**/*.js', livereload.changed);
+    gulp.watch('public/**/*.js', livereload.changed);
     gulp.watch('source/images/**/*', ['images']);
-    gulp.watch('public/styles/**/*.css', livereload.changed);
+    gulp.watch('public/**/*.css', livereload.changed);
 
 });
 
