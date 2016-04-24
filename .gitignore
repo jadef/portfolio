@@ -1,13 +1,15 @@
-# environment automation
+# Environment #
+###############
 /.project
 .settings/
 /.buildpath
 .bundle
-.librarian
 .tmp
+.sass-cache
 node_modules/
 
-# Editor temps and files
+# Editor temps and files #
+##########################
 .idea
 *~
 *.iml
