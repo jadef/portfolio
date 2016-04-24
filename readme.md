@@ -16,6 +16,12 @@ This codebase houses the code for [Jade Faist's Portfolio Website](https://www.j
 
 `TODO`
 
+Super simple solution:
+
+* `cd public`
+* `python -m SimpleHTTPServer 3050` (or whatever port you want)
+* In browser go to: localhost:3050
+
 # Frontend Tools
 
 ## Install NPM dependencies
