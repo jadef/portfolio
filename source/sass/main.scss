@@ -1,3 +1,19 @@
 @import "vendor/normalize";
 
-@import "elements/main";
+// Elements
+@import "elements/fonts";
+@import "elements/utilities";
+@import "elements/type";
+
+// Sections
+@import "sections/header";
+@import "sections/content";
+@import "sections/footer";
+
+// Components
+@import "components/contact";
+@import "components/what";
+@import "components/where";
+@import "components/modal";
+@import "components/how";
+@import "components/education";

@@ -1,0 +1,49 @@
+// ----- Random Bits
+
+// Selection Coloring
+::-moz-selection {
+    background: #eb9000;
+  color: #fff;
+    text-shadow: 2px 2px 0 #d78400;
+}
+::selection {
+    background: #eb9000;
+  color: #fff;
+    text-shadow: 2px 2px 0 #d78400;
+}
+
+// global box-sizing
+*,
+*:after,
+*:before {
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+// Browse Happy prompt
+.browsehappy {
+    background: #ccc;
+    color: #000;
+    padding: 20px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+// Clear: contain floats
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+.clear:after {
+    clear: both;
+}
+.clear {
+    *zoom: 1;
+}

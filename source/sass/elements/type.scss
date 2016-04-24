@@ -1,0 +1,95 @@
+// ----- Base styles
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0; padding: 0; border: 0;
+}
+html, button, input, select, textarea {
+    color: #3e3e3e;
+  font-family: 'Source Sans Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+html {
+  background-color: #b4e9ff;
+  font-size: 1.125em;
+  font-weight: 300;
+    line-height: 1.4em;
+  margin: 0 0;
+  min-height:100%;
+  padding: 0 0;
+  position:relative;
+}
+body {
+  background: transparent url('../images/background-a.jpg') no-repeat top center;
+  height:100%;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #dedede;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 4% 0;
+  padding: 0;
+}
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.1em;
+}
+h2 {
+  color: #0f648a;
+  font-size: 1.6em;
+  text-transform: lowercase;
+  padding-bottom: 0.5em;
+}
+h3 {
+  color: #136a8f;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+  list-style-position: outside;
+  margin: 0 0 1em 1.5em;
+}
+ul li {
+  text-indent: -0.8em;
+}
+ul li:before {
+  content: "\f105 ";
+  font-family: FontAwesome;
+  font-size: 0.85em;
+  padding-right: 10px;
+}
+ul li:hover:before {
+  padding-left: 2px;
+  padding-right: 8px;
+}
+p {
+  padding-bottom: 1em;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  height: auto;
+  max-width:100%;
+}
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+a:link, a:active, a:visited {
+  color: #136a8f;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  color: #eb9000;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}

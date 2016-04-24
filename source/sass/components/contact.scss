@@ -1,0 +1,26 @@
+// -----  Contact
+#contact {
+  padding: 30px 30px;
+}
+#contact a {
+  display: block;
+  font-size: 1.2222em;
+  padding: 10px 0 10px 40px;
+  text-decoration: none;
+  text-indent: -30px;
+  text-shadow: 1px 1px 0 #a5e2f5;
+}
+#contact span {
+  font-family: FontAwesome;
+  padding-right: 10px;
+}
+
+// ----- 501px Break
+@media only screen and (min-width: 501px) {
+
+}
+
+// ----- 1056px break
+@media only screen and (min-width: 1056px) {
+
+}
