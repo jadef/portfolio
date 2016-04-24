@@ -1,0 +1,25 @@
+{
+  "name": "jadef-portfolio",
+  "version": "1.0.0",
+  "description": "Jade Faist Portfolio Site",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:jadef/portfolio.git"
+  },
+  "author": "Jade Faist",
+  "license": "ISC"
+}

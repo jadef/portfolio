@@ -1,0 +1,26 @@
+# environment automation
+/.project
+.settings/
+/.buildpath
+.bundle
+.librarian
+.tmp
+node_modules/
+
+# Editor temps and files
+.idea
+*~
+*.iml
+*.sw[po]
+TODO.md
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.tmp
+*.bak
+
+# OS generated files #
+######################
+.DS_Store
