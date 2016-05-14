@@ -134,6 +134,7 @@ gulp.task('watch', ['build'], function() {
     gulp.watch('source/sass/**/*.scss', ['sass']);
     gulp.watch('source/scripts/**/*.js', ['js']);
     gulp.watch('source/images/**/*', ['images']);
+    gulp.watch('source/model.json', ['templates']);
 
 });
 

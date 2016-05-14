@@ -1,3 +1,25 @@
 {
-  "projectname": "Jade Faist"
+  "projectname": "Jade Faist",
+  "description": {
+    "title": "What Makes Me Tick",
+    "content": "<p>Development is a form of building, and as an intrinsic builder, I always apply logic and reason to every situation, bringing a linear way of thinking to solve problems or discover how things work. Let's face it, you would want a web developer to be organized, always putting the right things where they belong.</p>\n<p>My process-oriented mentality serves me well as a front-end developer, where I excel in translating user's needs, designer's choices, and code solutions to build the right answer to practical problems.</p>"
+  },
+  "proficiencies-a": [
+    "HTML 5",
+    "CSS / Sass",
+    "JavaScript",
+    "Jquery / Backbone",
+    "Guard, Grunt, Gulp",
+    "Magento <a href=\"http://www.magentocommerce.com/certification/directory/dev/1797242/\" target=\"_blank\">Certified</a>",
+    "WordPress",
+    "Expression Engine"
+  ],
+  "proficiencies-b": [
+    "Git",
+    "Photoshop",
+    "Illustrator",
+    "User Experience",
+    "Responsive Design &amp; Development"
+  ],
+  "resume-link": "jadefaist-resume.pdf"
 }
