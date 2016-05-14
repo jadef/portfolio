@@ -100,7 +100,7 @@ gulp.task('images', function() {
 gulp.task('sass', function() {
     console.log("Building " + sassStyle + " Sass...");
 
-    return gulp.src('source/sass/main.scss')
+    return gulp.src('source/sass/styles.scss')
         .pipe(compass({
             config_file: 'config.rb',
             sass: 'source/sass',
