@@ -4,19 +4,24 @@
   "description": "Jade Faist Portfolio Site",
   "main": "gulpfile.js",
   "devDependencies": {
+    "browser-sync": "^2.12.7",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.4.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-mustache": "^2.2.0",
     "gulp-order": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.1",
     "gulp-sequence": "^0.4.5",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5"
+  },
+  "dependencies": {
+    "mustache": "^2.2.1"
   },
   "repository": {
     "type": "git",

@@ -1,30 +1,33 @@
 // ---- Setup ----
 // -- Dependencies
-var gulp = require('gulp'),
-    del = require('del'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    livereload = require('gulp-livereload'),
-    compass = require('gulp-compass'),
-    watch = require('gulp-watch'),
-    gutil = require('gulp-util'),
-    order = require('gulp-order'),
-    sequence = require('gulp-sequence'),
-    sourcemaps = require('gulp-sourcemaps'),
-    imagemin = require('gulp-imagemin');
+var browserSync = require('browser-sync'),
+    compass     = require('gulp-compass'),
+    concat      = require('gulp-concat'),
+    del         = require('del'),
+    fs          = require('fs'),
+    gulp        = require('gulp'),
+    gutil       = require('gulp-util'),
+    imagemin    = require('gulp-imagemin'),
+    mustache    = require('gulp-mustache'),
+    order       = require('gulp-order'),
+    plumber     = require('gulp-plumber'),
+    sequence    = require('gulp-sequence'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    uglify      = require('gulp-uglify'),
+    watch       = require('gulp-watch');
+
 
 // ---- Project Settings ----
 
 // Allows gulp --dev to be run for a more verbose output
-var isProduction = true;
-var sassStyle = 'compressed';
-var sourceMap = false;
-var isWatching = false;
+var isProduction    = true,
+    sassStyle       = 'compressed',
+    sourceMap       = false;
 
 if (gutil.env.dev === true) {
+    isProduction = false;
     sassStyle = 'expanded';
     sourceMap = true;
-    isProduction = false;
 }
 
 // ---- Tasks ----
@@ -33,10 +36,22 @@ if (gutil.env.dev === true) {
 gulp.task('clean', function() {
     del(['public/scripts/*',
         'public/images/*',
-        'public/styles/*'], function (errors, paths) {
+        'public/styles/*'],
+        function (errors, paths) {
+            console.log('Deleted compiled files/folders:\n', paths.join('\n'));
+        }
+    );
+});
 
-        console.log('Deleted compiled files/folders:\n', paths.join('\n'));
-    });
+// ---- Build Templates ----
+gulp.task('templates', () => {
+  var model = JSON.parse(fs.readFileSync('./source/model.json', 'utf8'));
+
+  return gulp.src('source/index.mustache')
+             .pipe(plumber())
+             .pipe(mustache(model, { extension: '.html' }))
+             .pipe(gulp.dest('./public/'))
+             .pipe(browserSync.reload({ stream: true }));
 });
 
 // -- Build JS
@@ -59,6 +74,7 @@ gulp.task('js', function(){
         .pipe(isProduction ? uglify({mangle: false, preserveComments: 'some'}) : gutil.noop())
         .pipe(isProduction ? gutil.noop() : sourcemaps.write('.'))
         .pipe(gulp.dest('public/'))
+        .pipe(browserSync.reload({ stream: true }))
         .on('error', function (error) {
             console.log(error);
         });
@@ -73,6 +89,7 @@ gulp.task('images', function() {
     gulp.src('source/images/**/*')
         .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
         .pipe(gulp.dest('public/images'))
+        .pipe(browserSync.reload({ stream: true }))
         .on('error', function (error) {
             console.log(error);
         });
@@ -93,34 +110,35 @@ gulp.task('sass', function() {
             comments: isProduction,
             debug: isProduction
         }))
+        .pipe(browserSync.reload({ stream: true }))
         .on('error', function (error) {
             console.log(error);
         });
 });
 
-// ---- Utility Tasks ----
-
-// -- Livereload
-gulp.task('livereload', function() { livereload.changed(); });
-
 // ---- Watchers ----
 
 // -- Watch and compile SASS changes
 gulp.task('watch', ['build'], function() {
-    isWatching = true;
-    livereload.listen();
+      browserSync({
+        notify: false,
+        port: 5050,
+        server: {
+          baseDir: ['./public']
+        }
+      })
 
-    //Watch SCSS and CSS for changes, compile compass and run livereload on change
+    //Watch SCSS and CSS for changes, compile compass
+    gulp.watch('source/index.mustache', ['templates']);
+    gulp.watch('source/templates/**/*.mustache', ['templates']);
     gulp.watch('source/sass/**/*.scss', ['sass']);
     gulp.watch('source/scripts/**/*.js', ['js']);
-    gulp.watch('public/**/*.js', livereload.changed);
     gulp.watch('source/images/**/*', ['images']);
-    gulp.watch('public/**/*.css', livereload.changed);
 
 });
 
 gulp.task('default', ['watch']);
 
 // ---- Builders ----
-gulp.task('compile', sequence('clean', ['js', 'images'], 'sass'));
-gulp.task('build', sequence('images', 'js', 'sass'));
+gulp.task('compile', sequence('clean', ['js', 'images'], 'sass', 'templates'));
+gulp.task('build', sequence('images', 'js', 'sass', 'templates'));

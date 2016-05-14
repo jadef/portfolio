@@ -36,8 +36,7 @@ Gulp will have been installed globally. You can initiate any gulp tasks from **t
 1. build js in **uncompressed** development mode into design package and creates a source-map file
 2. copy and compress images into design package
 3. build css in **uncompressed** development mode into design package and creates a source-map file
-4. Starts livereload listener
-5. watches the following folders
+4. watches the following folders
 
 * source/scripts
 * source/images
@@ -64,10 +63,13 @@ Appending `--dev` on any task will save any appropriate js and css files in **un
 
 `$ gulp -v`: Output gulp versions (locally and globally)
 
+### Mustache
 
-### LiveReload
+`TODO`
 
-[Browser Extension for Chrome](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
+### BrowserSync
+
+`TODO`
 
 ### JavaScript
 
