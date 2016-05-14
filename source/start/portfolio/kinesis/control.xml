@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portfolio>
+	<fulltitle>Kinesis CRM Web application</fulltitle>
+	<subtitle>(front end programming)</subtitle>
+	<link></link>
+	<slide id="1">
+		<description><![CDATA[
+		The Kinesis CRM is a custom web application developed as a simple, yet powerful, tracking tool designed to fit the needs of Kinesis' small to mid-sized business clients. It was intentionally planned with responsive design in mind to facilitate multiple platforms and user situations.
+		]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Homepage</title>
+		<image>responsive.jpg</image>
+	</slide>
+	<slide id="2">
+		<description><![CDATA[
+		Logged in users are immediately taken to the simple contact form. This removes barriers to entering new contacts into the system.
+		]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Add - Simple</title>
+		<image>add-simple.jpg</image>
+	</slide>
+	<slide id="3">
+		<description><![CDATA[
+		The user can also switch to the expanded view for a more comprehensive entry form.
+		]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Add - Expanded</title>
+		<image>add-expanded.jpg</image>
+	</slide>
+	<slide id="4">
+		<description><![CDATA[
+		The user is given easy controls to customize the contact list with simple sort, search and table view options. This lets the user find entries quickly.
+		]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>Browse</title>
+		<image>browse.jpg</image>
+	</slide>
+	<slide id="5">
+		<description><![CDATA[
+		The user can update the status of a contact as they move forward in the marketing and sales process. Again, all interfaces were designed to be clean and intuitive at all screen sizes.
+		]]></description>
+		<footnote><![CDATA[ Credits: Created while employed at <a href="http://www.kinesisinc.com/" target="_blank">Kinesis</a>.]]></footnote>
+		<title>View</title>
+		<image>view.jpg</image>
+	</slide>
+</portfolio>

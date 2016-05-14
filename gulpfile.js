@@ -34,20 +34,24 @@ if (gutil.env.dev === true) {
 
 // -- Clean up
 gulp.task('clean', function() {
-    del(['public/scripts/*',
-        'public/images/*',
-        'public/styles/*'],
+    del(['./public/**/*'],
         function (errors, paths) {
             console.log('Deleted compiled files/folders:\n', paths.join('\n'));
         }
     );
 });
 
-// ---- Build Templates ----
+// -- Starter files
+gulp.task('start', function() {
+    return gulp.src(['./source/start/**/*'])
+               .pipe(gulp.dest('public/'));
+});
+
+// -- Build Templates
 gulp.task('templates', () => {
   var model = JSON.parse(fs.readFileSync('./source/model.json', 'utf8'));
 
-  return gulp.src('source/index.mustache')
+  return gulp.src('./source/index.mustache')
              .pipe(plumber())
              .pipe(mustache(model, { extension: '.html' }))
              .pipe(gulp.dest('./public/'))
@@ -58,7 +62,7 @@ gulp.task('templates', () => {
 gulp.task('js', function(){
     console.log("Building scripts " + (isProduction ? "with" : "no") + " uglification...");
 
-    gulp.src('source/scripts/**/*.js')
+    gulp.src('./source/scripts/**/*.js')
         .pipe(order([
             // Control folder order this way
             'source/scripts/modernizr.js',
@@ -68,12 +72,12 @@ gulp.task('js', function(){
             'source/scripts/onload.js',
             // Catch for any unaccounted for files
             'source/scripts/**/*.js'
-        ], {base: 'source/scripts/'}))
+        ], {base: './source/scripts/'}))
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
         .pipe(isProduction ? uglify({mangle: false, preserveComments: 'some'}) : gutil.noop())
         .pipe(isProduction ? gutil.noop() : sourcemaps.write('.'))
-        .pipe(gulp.dest('public/'))
+        .pipe(gulp.dest('./public/'))
         .pipe(browserSync.reload({ stream: true }))
         .on('error', function (error) {
             console.log(error);
@@ -86,9 +90,9 @@ gulp.task('images', function() {
 
     // TODO: don't rebuild if they exist
 
-    gulp.src('source/images/**/*')
+    gulp.src('./source/images/**/*')
         .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-        .pipe(gulp.dest('public/images'))
+        .pipe(gulp.dest('./public/images/'))
         .pipe(browserSync.reload({ stream: true }))
         .on('error', function (error) {
             console.log(error);
@@ -100,11 +104,11 @@ gulp.task('images', function() {
 gulp.task('sass', function() {
     console.log("Building " + sassStyle + " Sass...");
 
-    return gulp.src('source/sass/styles.scss')
+    return gulp.src('./source/sass/styles.scss')
         .pipe(compass({
-            config_file: 'config.rb',
-            sass: 'source/sass',
-            css: 'public/',
+            config_file: './config.rb',
+            sass: './source/sass/',
+            css: './public/',
             style: sassStyle,
             sourcemap: sourceMap,
             comments: isProduction,
@@ -124,22 +128,22 @@ gulp.task('watch', ['build'], function() {
         notify: false,
         port: 5050,
         server: {
-          baseDir: ['./public']
+          baseDir: ['./public/']
         }
       })
 
     //Watch SCSS and CSS for changes, compile compass
-    gulp.watch('source/index.mustache', ['templates']);
-    gulp.watch('source/templates/**/*.mustache', ['templates']);
-    gulp.watch('source/sass/**/*.scss', ['sass']);
-    gulp.watch('source/scripts/**/*.js', ['js']);
-    gulp.watch('source/images/**/*', ['images']);
-    gulp.watch('source/model.json', ['templates']);
+    gulp.watch('./source/index.mustache', ['templates']);
+    gulp.watch('./source/templates/**/*.mustache', ['templates']);
+    gulp.watch('./source/sass/**/*.scss', ['sass']);
+    gulp.watch('./source/scripts/**/*.js', ['js']);
+    gulp.watch('./source/images/**/*', ['images']);
+    gulp.watch('./source/model.json', ['templates']);
 
 });
 
 gulp.task('default', ['watch']);
 
 // ---- Builders ----
-gulp.task('compile', sequence('clean', ['js', 'images'], 'sass', 'templates'));
+gulp.task('compile', sequence('clean', ['js', 'images', 'sass'], 'templates', 'start'));
 gulp.task('build', sequence('images', 'js', 'sass', 'templates'));
