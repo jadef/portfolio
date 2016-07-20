@@ -9,7 +9,6 @@ html, button, input, select, textarea {
   font-family: 'Source Sans Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 html {
-  background-color: $c-background;
   font-size: 1.125em;
   font-weight: 300;
     line-height: 1.4em;
@@ -19,8 +18,21 @@ html {
   position:relative;
 }
 body {
-  background: transparent url('../images/background-a.jpg') no-repeat top center;
+  background-color: $c-white;
   height:100%;
+
+  &:after {
+    background: transparent url('../images/background-b.jpg') no-repeat top center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 hr {
   border: 0;
@@ -90,6 +102,7 @@ a:link, a:active, a:visited {
 }
 a:hover, a:focus {
   color: $c-accent;
+  outline: 0;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
