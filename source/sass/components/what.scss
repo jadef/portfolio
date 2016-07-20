@@ -16,8 +16,9 @@
   width: 96%;
 }
 #what li:hover {
-  -webkit-box-shadow: 0 0 8px 2px $c-white;
-  box-shadow: 0 0 8px 2px $c-white;
+  border-color: $c-blue-light1;
+  -webkit-box-shadow: 0 0 6px 2px rgba($c-white, 0.5);
+  box-shadow: 0 0 6px 2px rgba($c-white, 0.5);
 }
 #what li:before {
   content: "";

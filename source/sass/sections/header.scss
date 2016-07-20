@@ -31,7 +31,8 @@ nav a:last-child {
   border-radius: 0 0 4px 0;
 }
 nav a:link,
-nav a:visited {
+nav a:visited,
+nav a:focus {
   color: $c-blue-light1;
   display: block;
   float: left;
@@ -40,8 +41,7 @@ nav a:visited {
   text-transform: lowercase;
   width: 25%;
 }
-nav a:hover,
-nav a:focus {
+nav a:hover {
   -webkit-box-shadow:inset 0 0 10px 2px $c-blue-light1;
   box-shadow:inset 0 0 10px 2px $c-blue-light1;
 }
