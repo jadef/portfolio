@@ -18,7 +18,7 @@ html {
   position:relative;
 }
 body {
-  background-color: $c-white;
+  background-color: $c-blue-light1;
   height:100%;
 
   &:after {
@@ -27,7 +27,6 @@ body {
     content: '';
     height: 100%;
     left: 0;
-    opacity: 0.75;
     position: fixed;
     top: 0;
     width: 100%;

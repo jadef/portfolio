@@ -49,6 +49,10 @@ footer {
   #intro {
     display: flex;
     width: 96%;
+
+    .content {
+      flex-basis: 60%;
+    }
   }
   #contact {
     margin: 0 0 4% 4%;
@@ -75,8 +79,15 @@ footer {
   }
   #intro,
   #contact {
+    display: block;
     margin-right: 0;
     margin-left: 0;
     width: 100%;
+  }
+  footer {
+    border: 3px solid $c-blue-light2;
+    margin: 0 auto;
+    padding: 30px;
+    width: 30%;
   }
 }
