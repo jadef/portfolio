@@ -43,8 +43,8 @@ $(document).ready(function () {
 			});
 		});
 	}
-	
-	
+
+
 	/// ------- Modal Window
 	$("#what .thumb").click(function (e) {
 		e.preventDefault();
@@ -114,7 +114,7 @@ $(document).ready(function () {
 				});
 			}
 		});
-		
+
 		// --- Show it
 		$('#overlay').fadeIn(500, function () {
 			$('#modal-content').css('top', $(window).scrollTop() + 'px').slideDown(500, function () {
@@ -124,7 +124,7 @@ $(document).ready(function () {
 			});
 		});
 	});
-	
+
 	// --- Close it
 	$(document.body).on('click', '#overlay, #overlay .close', function (event) {
 		event.preventDefault();
@@ -135,25 +135,6 @@ $(document).ready(function () {
 	$(document.body).on('click', '#overlay > *', function (event) {
 		event.stopPropagation();
 	});
-	
-	
-	// ------- Column height for mid levels
-	if ($(window).width() > 501 && $(window).width() < 1056) {
-		var importanth = $('#where .important').outerHeight(),
-			whereh = $('#where').outerHeight();
-		if (importanth < whereh) {
-			$('#where .important').height(whereh);
-		}
-	}
-	$(window).resize(function () { // Resizing
-		if ($(window).width() > 501 && $(window).width() < 1056) {
-			var whereh = $('#where').outerHeight();
-			$('#where .important').height(whereh);
-		} else {
-			$('#where .important').css('height', '');
-		}
-	});
-	
 
 	// ------- Vertical Scrolling
 	if ($('header nav').length) { // if there's navigation
@@ -174,7 +155,7 @@ $(document).ready(function () {
 				$('nav').css('top', '');
 			}
 			lastScrollTop = st;
-	
+
 			if ($(window).scrollTop() < what - 51) { // Who
 				$('nav').css('background-position', '12.5% bottom');
 			} else if ($(window).scrollTop() < where - 51) { // What
@@ -186,12 +167,12 @@ $(document).ready(function () {
 			}
 		});
 	}
-	
+
 	// ------- Email
 	var mailto, domain, mailname;
 	mailto = "mailto:";
 	domain = "jfaist.com";
 	mailname = "jade@";
 	$(".email").attr('href', mailto + mailname + domain).attr('title', "Email Me").html("<span>&#xf0e0;</span> email me");
-	
+
 });
