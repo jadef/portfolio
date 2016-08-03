@@ -40,17 +40,15 @@ if (gutil.env.prod === true) {
 
 // -- Clean up
 gulp.task('clean', function() {
-  del([dest + '**/*'],
-    function (errors, paths) {
-      console.log('Deleted compiled files/folders:\n', paths.join('\n'));
-    }
-  );
+  del([dest + '**/*']).then( paths => {
+    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), paths.join('\n'));
+  });
 });
 
 // -- Starter files
 gulp.task('start', function() {
   return gulp.src([source + 'start/**/*'])
-             .pipe(gulp.dest(dest));
+    .pipe(gulp.dest(dest));
 });
 
 // -- Build Templates
