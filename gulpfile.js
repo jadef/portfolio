@@ -23,18 +23,17 @@ var browserSync = require('browser-sync'),
 
 var source          = './source/',
     dest            = './public/',
-    isProduction    = true,
-    sassStyle       = 'compressed',
-    sourceMap       = false;
-
-// Allows gulp --dev to be run for a more verbose output
-if (gutil.env.dev === true) {
-    isProduction    = false;
-    sassStyle       = 'expanded';
+    isProduction    = false,
+    browserlist     = ['last 2 versions'],
+    sassStyle       = 'expanded',
     sourceMap       = true;
-}
 
-var browserlist = ['last 2 versions'];
+// Allows gulp --prod to be run for the compressed output
+if (gutil.env.prod === true) {
+    isProduction    = true;
+    sassStyle       = 'compressed';
+    sourceMap       = false;
+}
 
 
 // ------ Tasks ------
