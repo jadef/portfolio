@@ -15,7 +15,7 @@ var browserSync = require('browser-sync'), // Browser Sync
     sequence    = require('gulp-sequence'), // Order tasks
     sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
     uglify      = require('gulp-uglify'), // JS minification
-    gutil       = require('gulp-util'), // Various utilities like noop
+    gutil       = require('gulp-util'), // Various utilities like colors and noop
     watch       = require('gulp-watch'); // Watching files
 
 
@@ -64,7 +64,8 @@ gulp.task('templates', function() {
 
 // -- Build JS
 gulp.task('js', function() {
-  console.log("Building scripts with" + (isProduction ? " " : "out ") + "uglification...");
+
+  gutil.log("Building scripts " + gutil.colors.yellow((isProduction ? "with" : "without")) + " uglification...");
 
   gulp.src(source + 'scripts/**/*.js')
       .pipe(order([
@@ -84,13 +85,13 @@ gulp.task('js', function() {
       .pipe(gulp.dest(dest))
       .pipe(browserSync.reload({ stream: true }))
       .on('error', function (error) {
-        console.log(error);
+        gutil.log(error);
       });
 });
 
 // -- Build Images
 gulp.task('images', function() {
-  console.log("Building Images...");
+  gutil.log("Building " + gutil.colors.yellow("all") + " Images...");
 
   // TODO: don't rebuild if they exist
 
@@ -99,13 +100,13 @@ gulp.task('images', function() {
     .pipe(gulp.dest(dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
-      console.log(error);
+      gutil.log(error);
     });
 });
 
 // -- Build CSS from Sass
 gulp.task('sass', function() {
-  console.log("Building " + sassStyle + " Sass...");
+  gutil.log("Building " + gutil.colors.yellow(sassStyle) + " Sass...");
 
   return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
@@ -118,13 +119,13 @@ gulp.task('sass', function() {
       debug: isProduction
     }))
     .on('error', function (error) {
-      console.log(error);
+      gutil.log(error);
     });
 });
 
 // -- Run processes on CSS
 gulp.task('css', ['sass'],  function() {
-  console.log("Formatting " + sassStyle + " CSS...");
+  gutil.log("Formatting " + gutil.colors.yellow(sassStyle) + " CSS...");
 
   return gulp.src(dest + 'styles.css')
     .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
@@ -135,7 +136,7 @@ gulp.task('css', ['sass'],  function() {
     .pipe(gulp.dest(dest))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
-      console.log(error);
+      gutil.log(error);
     });
 });
 
