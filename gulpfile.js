@@ -1,22 +1,22 @@
 // ------ Setup ------
 
 // -- Dependencies
-var browserSync = require('browser-sync'),
-    del         = require('del'),
-    fs          = require('fs'),
-    gulp        = require('gulp'),
-    autoprefixer= require('gulp-autoprefixer'),
-    compass     = require('gulp-compass'),
-    concat      = require('gulp-concat'),
-    imagemin    = require('gulp-imagemin'),
-    mustache    = require('gulp-mustache'),
-    order       = require('gulp-order'),
-    plumber     = require('gulp-plumber'),
-    sequence    = require('gulp-sequence'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    uglify      = require('gulp-uglify'),
-    gutil       = require('gulp-util'),
-    watch       = require('gulp-watch');
+var browserSync = require('browser-sync'), // Browser Sync
+    del         = require('del'), // Delete
+    fs          = require('fs'), // File System
+    gulp        = require('gulp'), // Base Gulp
+    autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
+    compass     = require('gulp-compass'), // Compass - Compile Sass
+    concat      = require('gulp-concat'), // Concatinate files
+    imagemin    = require('gulp-imagemin'), // Process Images
+    mustache    = require('gulp-mustache'), // Interpolate mustache files
+    order       = require('gulp-order'), // Order files
+    plumber     = require('gulp-plumber'), // Pipe error patch
+    sequence    = require('gulp-sequence'), // Order tasks
+    sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
+    uglify      = require('gulp-uglify'), // JS minification
+    gutil       = require('gulp-util'), // Various utilities like noop
+    watch       = require('gulp-watch'); // Watching files
 
 
 // ------ Project Settings ------
