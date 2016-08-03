@@ -8,7 +8,6 @@ var browserSync = require('browser-sync'),
     autoprefixer= require('gulp-autoprefixer'),
     compass     = require('gulp-compass'),
     concat      = require('gulp-concat'),
-    gulpif      = require('gulp-if'),
     imagemin    = require('gulp-imagemin'),
     mustache    = require('gulp-mustache'),
     order       = require('gulp-order'),
@@ -68,7 +67,7 @@ gulp.task('templates', function() {
 
 // -- Build JS
 gulp.task('js', function() {
-  console.log("Building scripts " + (isProduction ? "with" : "no") + " uglification...");
+  console.log("Building scripts with" + (isProduction ? " " : "out ") + "uglification...");
 
   gulp.src(source+'scripts/**/*.js')
       .pipe(order([
@@ -81,10 +80,10 @@ gulp.task('js', function() {
         // Catch for any unaccounted for files
         'source/scripts/**/*.js'
       ], {base: source+'scripts/'}))
-      .pipe(sourcemaps.init())
+      .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
       .pipe(concat('scripts.js'))
-      .pipe(isProduction ? uglify({mangle: false, preserveComments: 'some'}) : gutil.noop())
-      .pipe(isProduction ? gutil.noop() : sourcemaps.write('.'))
+      .pipe(isProduction ? uglify({mangle: true}) : gutil.noop())
+      .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
       .pipe(gulp.dest(dest))
       .pipe(browserSync.reload({ stream: true }))
       .on('error', function (error) {
@@ -131,11 +130,11 @@ gulp.task('css', ['sass'],  function() {
   console.log("Formatting " + sassStyle + " CSS...");
 
   return gulp.src(dest+'styles.css')
-    .pipe(gulpif(sourceMap, sourcemaps.init()))
+    .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
     .pipe(autoprefixer({
       browsers: browserlist
     }))
-    .pipe(gulpif(sourceMap, sourcemaps.write('.')))
+    .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
     .pipe(gulp.dest(dest))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
