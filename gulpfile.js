@@ -41,7 +41,7 @@ var browserlist = ['last 2 versions'];
 
 // -- Clean up
 gulp.task('clean', function() {
-  del([dest+'**/*'],
+  del([dest + '**/*'],
     function (errors, paths) {
       console.log('Deleted compiled files/folders:\n', paths.join('\n'));
     }
@@ -50,15 +50,15 @@ gulp.task('clean', function() {
 
 // -- Starter files
 gulp.task('start', function() {
-  return gulp.src([source+'start/**/*'])
+  return gulp.src([source + 'start/**/*'])
              .pipe(gulp.dest(dest));
 });
 
 // -- Build Templates
 gulp.task('templates', function() {
-  var model = JSON.parse(fs.readFileSync(source+'model.json', 'utf8'));
+  var model = JSON.parse(fs.readFileSync(source + 'model.json', 'utf8'));
 
-  return gulp.src(source+'index.mustache')
+  return gulp.src(source + 'index.mustache')
     .pipe(plumber())
     .pipe(mustache(model, { extension: '.html' }))
     .pipe(gulp.dest(dest))
@@ -69,7 +69,7 @@ gulp.task('templates', function() {
 gulp.task('js', function() {
   console.log("Building scripts with" + (isProduction ? " " : "out ") + "uglification...");
 
-  gulp.src(source+'scripts/**/*.js')
+  gulp.src(source + 'scripts/**/*.js')
       .pipe(order([
         // Control folder order this way
         'source/scripts/modernizr.js',
@@ -79,7 +79,7 @@ gulp.task('js', function() {
         'source/scripts/onload.js',
         // Catch for any unaccounted for files
         'source/scripts/**/*.js'
-      ], {base: source+'scripts/'}))
+      ], {base: source + 'scripts/'}))
       .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
       .pipe(concat('scripts.js'))
       .pipe(isProduction ? uglify({mangle: true}) : gutil.noop())
@@ -97,9 +97,9 @@ gulp.task('images', function() {
 
   // TODO: don't rebuild if they exist
 
-  gulp.src(source+'images/**/*')
+  gulp.src(source + 'images/**/*')
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(dest+'images/'))
+    .pipe(gulp.dest(dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
       console.log(error);
@@ -110,10 +110,10 @@ gulp.task('images', function() {
 gulp.task('sass', function() {
   console.log("Building " + sassStyle + " Sass...");
 
-  return gulp.src(source+'sass/styles.scss')
+  return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
       config_file: './config.rb',
-      sass: source+'sass/',
+      sass: source + 'sass/',
       css: dest,
       style: sassStyle,
       sourcemap: sourceMap,
@@ -129,7 +129,7 @@ gulp.task('sass', function() {
 gulp.task('css', ['sass'],  function() {
   console.log("Formatting " + sassStyle + " CSS...");
 
-  return gulp.src(dest+'styles.css')
+  return gulp.src(dest + 'styles.css')
     .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
     .pipe(autoprefixer({
       browsers: browserlist
@@ -156,12 +156,12 @@ gulp.task('watch', ['build'], function() {
   })
 
   // All the watches
-  gulp.watch(source+'index.mustache', ['templates']);
-  gulp.watch(source+'templates/**/*.mustache', ['templates']);
-  gulp.watch(source+'sass/**/*.scss', ['css']);
-  gulp.watch(source+'scripts/**/*.js', ['js']);
-  gulp.watch(source+'images/**/*', ['images']);
-  gulp.watch(source+'model.json', ['templates']);
+  gulp.watch(source + 'index.mustache', ['templates']);
+  gulp.watch(source + 'templates/**/*.mustache', ['templates']);
+  gulp.watch(source + 'sass/**/*.scss', ['css']);
+  gulp.watch(source + 'scripts/**/*.js', ['js']);
+  gulp.watch(source + 'images/**/*', ['images']);
+  gulp.watch(source + 'model.json', ['templates']);
 
 });
 
