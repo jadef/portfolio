@@ -12,6 +12,7 @@ var browserSync = require('browser-sync'), // Browser Sync
     mustache    = require('gulp-mustache'), // Interpolate mustache files
     order       = require('gulp-order'), // Order files
     plumber     = require('gulp-plumber'), // Pipe error patch
+    sassLint    = require('gulp-sass-lint'), // Linting of Sass
     sequence    = require('gulp-sequence'), // Order tasks
     sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
     uglify      = require('gulp-uglify'), // JS minification
@@ -110,7 +111,7 @@ gulp.task('sass', function() {
 
   return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
-      config_file: './config.rb',
+      config_file: './config/sass.rb',
       sass: source + 'sass/',
       css: dest,
       style: sassStyle,
@@ -138,6 +139,17 @@ gulp.task('css', ['sass'],  function() {
     .on('error', function (error) {
       gutil.log(error);
     });
+});
+
+// ------ Utilities ------
+
+gulp.task('lint', function () {
+  return gulp.src(source + 'sass/**/*.s+(a|c)ss')
+    .pipe(sassLint({
+      configFile: './config/.sass-lint.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 
