@@ -111,7 +111,7 @@ gulp.task('sass', function() {
 
   return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
-      config_file: './config/sass.rb',
+      config_file: './config-sass.rb',
       sass: source + 'sass/',
       css: dest,
       style: sassStyle,
@@ -146,7 +146,7 @@ gulp.task('css', ['sass'],  function() {
 gulp.task('lint', function () {
   return gulp.src(source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
-      configFile: './config/.sass-lint.yml'
+      configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
