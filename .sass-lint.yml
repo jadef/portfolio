@@ -86,6 +86,7 @@ rules:
         - em
         - rem
         - px
+        - s
         - vh
         - vw
         - vmin
