@@ -111,7 +111,7 @@ gulp.task('sass', ['sass-lint'], function() {
 
   return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
-      config_file: './config-sass.rb',
+      require: ['compass/import-once/activate', 'sass-globbing', 'susy'],
       sass: source + 'sass/',
       css: dest,
       style: sassStyle,
