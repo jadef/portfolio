@@ -106,7 +106,7 @@ gulp.task('images', function() {
 });
 
 // -- Build CSS from Sass
-gulp.task('sass', function() {
+gulp.task('sass', ['sass-lint'], function() {
   gutil.log("Building " + gutil.colors.yellow(sassStyle) + " Sass...");
 
   return gulp.src(source + 'sass/styles.scss')
@@ -143,7 +143,7 @@ gulp.task('css', ['sass'],  function() {
 
 // ------ Utilities ------
 
-gulp.task('lint', function () {
+gulp.task('sass-lint', function () {
   return gulp.src(source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
