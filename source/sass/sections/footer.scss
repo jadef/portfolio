@@ -1,26 +1,19 @@
 // ----- Footer
 footer {
-  text-align: center;
   padding: 4% 2%;
+  text-align: center;
 }
+
 footer .email span {
   display: none;
 }
+
 .justfun {
   color: $c-primary;
   font-size: 0.5555em;
   text-shadow: 1px 1px 0 $c-blue-light1;
 }
+
 .justfun span {
   font-family: FontAwesome;
-}
-
-// ----- 501px Break
-@media only screen and (min-width: 501px) {
-
-}
-
-// ----- 1056px break */
-@media only screen and (min-width: 1056px) {
-
 }
