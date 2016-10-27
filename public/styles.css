@@ -494,28 +494,35 @@ table {
   border-spacing: 0;
 }
 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3"), url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
 }
 ::-moz-selection {
   background: #eb9000;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 2px 2px 0 #d78400;
 }
 
 ::selection {
   background: #eb9000;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 2px 2px 0 #d78400;
 }
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -527,20 +534,20 @@ table {
 .browsehappy {
   background: #ccc;
   color: #000;
-  padding: 20px 20px;
+  padding: 20px;
   position: absolute;
   text-align: center;
   top: 0;
   width: 100%;
 }
 
-.clear:before,
-.clear:after {
-  content: " ";
+.clear::before,
+.clear::after {
+  content: ' ';
   display: table;
 }
 
-.clear:after {
+.clear::after {
   clear: both;
 }
 
@@ -548,26 +555,22 @@ table {
   *zoom: 1;
 }
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
-address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
-caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   color: #3e3e3e;
-  font-family: 'Source Sans Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 html {
   font-size: 1.125em;
   font-weight: 300;
   line-height: 1.4em;
-  margin: 0 0;
+  margin: 0;
   min-height: 100%;
-  padding: 0 0;
+  padding: 0;
   position: relative;
 }
 
@@ -575,7 +578,7 @@ body {
   background-color: #d0f0ff;
   height: 100%;
 }
-body:after {
+body::after {
   background: transparent url("../images/background-b.jpg") no-repeat top center;
   background-size: cover;
   content: '';
@@ -597,7 +600,8 @@ hr {
   padding: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 300;
   line-height: 1.1em;
 }
@@ -605,8 +609,8 @@ h1, h2 {
 h2 {
   color: #0f648a;
   font-size: 1.6em;
-  text-transform: lowercase;
   padding-bottom: 0.5em;
+  text-transform: lowercase;
 }
 
 h3 {
@@ -625,14 +629,14 @@ ul li {
   text-indent: -0.8em;
 }
 
-ul li:before {
-  content: "\f105 ";
+ul li::before {
+  content: '\f105';
   font-family: FontAwesome;
   font-size: 0.85em;
   padding-right: 10px;
 }
 
-ul li:hover:before {
+ul li:hover::before {
   padding-left: 2px;
   padding-right: 8px;
 }
@@ -651,8 +655,8 @@ img {
 }
 
 video {
-  width: 100% !important;
   height: auto !important;
+  width: 100% !important;
 }
 
 audio,
@@ -662,13 +666,16 @@ video {
   vertical-align: middle;
 }
 
-a:link, a:active, a:visited {
+a:link,
+a:active,
+a:visited {
   color: #136a8f;
   text-decoration: underline;
-  transition: all 200ms ease;
+  transition: all 0.2s ease;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #eb9000;
   outline: 0;
 }
@@ -678,16 +685,16 @@ header {
 }
 
 nav {
-  background-color: #77ccee;
+  background-color: #7ce;
   background-position: 12.5% bottom;
   background-repeat: no-repeat;
   border-radius: 0 0 4px 4px;
-  box-shadow: 0px 1px 4px 0 rgba(15, 100, 138, 0.35);
+  box-shadow: 0 1px 4px 0 rgba(15, 100, 138, 0.35);
   margin: 0 10%;
   position: fixed;
-  top: -25px;
   text-align: center;
-  transition: all 250ms;
+  top: -25px;
+  transition: all 0.25s;
   width: 80%;
   z-index: 999;
 }
@@ -725,10 +732,10 @@ h1 {
   font-size: 3.3333em;
   font-weight: 300;
   line-height: 1em;
-  margin: 0 0;
+  margin: 0;
   text-align: center;
   text-transform: lowercase;
-  transition: all 250ms;
+  transition: all 0.25s;
 }
 
 h1:hover {
@@ -738,7 +745,7 @@ h1:hover {
 
 @media only screen and (min-width: 501px) {
   header {
-    padding: 5% 0 5% 0;
+    padding: 5% 0;
   }
 
   nav {
@@ -755,7 +762,7 @@ h1:hover {
 }
 @media only screen and (min-width: 1056px) {
   header {
-    padding: 3% 0 3% 0;
+    padding: 3% 0;
   }
 
   nav {
@@ -786,10 +793,10 @@ header,
 #education,
 footer {
   background-color: rgba(255, 255, 255, 0.9);
-  border-top: 3px solid #aed4e1;
   border-bottom: 3px solid #aed4e1;
+  border-top: 3px solid #aed4e1;
   box-shadow: 2px 2px 6px 0 rgba(15, 100, 138, 0.35);
-  padding: 30px 30px;
+  padding: 30px;
 }
 
 @media only screen and (min-width: 501px) {
@@ -804,14 +811,8 @@ footer {
   #where,
   #how,
   #education {
-    margin: 0 2% 30px 2%;
-  }
-
-  #intro,
-  #where,
-  #how,
-  #education {
     border: 3px solid #aed4e1;
+    margin: 0 2% 30px 2%;
     padding: 30px;
   }
 
@@ -834,7 +835,8 @@ footer {
     width: 96%;
   }
 
-  #how, #education {
+  #how,
+  #education {
     width: 46%;
   }
 }
@@ -853,8 +855,8 @@ footer {
   #intro,
   #contact {
     display: block;
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
     width: 100%;
   }
 
@@ -866,8 +868,8 @@ footer {
   }
 }
 footer {
-  text-align: center;
   padding: 4% 2%;
+  text-align: center;
 }
 
 footer .email span {
@@ -902,14 +904,14 @@ footer .email span {
 }
 
 #what li {
-  list-style: none;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 4px solid #aed4e1;
   box-shadow: 2px 2px 6px 0 rgba(15, 100, 138, 0.35);
   display: block;
-  margin: 0 2% 4% 2%;
+  list-style: none;
+  margin: 0 2% 4%;
   text-indent: 0;
-  transition: all 250ms;
+  transition: all 0.25s;
   width: 96%;
 }
 
@@ -918,9 +920,9 @@ footer .email span {
   box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.5);
 }
 
-#what li:before {
-  content: "";
-  padding: 0 0;
+#what li::before {
+  content: '';
+  padding: 0;
 }
 
 @media only screen and (min-width: 501px) {
@@ -948,7 +950,7 @@ footer .email span {
   padding-top: 25px;
 }
 #where section:nth-child(2) {
-  border-top: none;
+  border-top: 0;
   margin-top: 0;
 }
 #where h3,
@@ -965,34 +967,26 @@ footer .email span {
   padding: 5px 30px;
 }
 #where .important {
-  background-color: #1c80a9;
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
   background: linear-gradient(to bottom, #217fa7 0%, #0d5e81 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-blue1', endColorstr='$c-blue-dark4',GradientType=0 );
-  /* IE6-9 */
+  background-color: #1c80a9;
   border-bottom: 4px solid #aed4e1;
   box-shadow: 2px 2px 6px 0 rgba(15, 100, 138, 0.35);
-  color: #ffffff;
+  color: #fff;
   font-size: 1.125em;
   margin: -30px -30px 0 -30px;
-  padding: 30px 30px;
+  padding: 30px;
 }
 #where .important h3 {
   background: transparent url("../images/copious-logo.png") no-repeat top center;
   background-size: contain;
+  height: 60px;
   margin: 0 auto;
   max-width: 100%;
-  height: 60px;
-  width: 200px;
   text-indent: -9999em;
+  width: 200px;
 }
 #where .important .title {
-  padding: 18px 0 20px 0;
+  padding: 18px 0 20px;
 }
 #where .important .date {
   background-color: #136a8f;
@@ -1009,26 +1003,26 @@ footer .email span {
 
 @media only screen and (min-width: 501px) {
   #where {
-    position: relative;
-    padding-top: 0;
     margin-top: 40px;
+    padding-top: 0;
+    position: relative;
   }
   #where section.important {
     border: 4px solid #aed4e1;
-    margin: -20px 0 0 0;
+    margin: -20px 0 0;
     overflow: visible;
   }
 }
 @media only screen and (min-width: 1056px) {
   #where {
     margin-top: 0;
-    padding: 0 0;
+    padding: 0;
   }
   #where section {
-    border-top: none;
+    border-top: 0;
     float: left;
-    margin: 0 0;
-    padding: 45px 20px 20px 20px;
+    margin: 0;
+    padding: 45px 20px 20px;
     width: 25%;
   }
   #where h3 {
@@ -1040,7 +1034,7 @@ footer .email span {
   }
   #where .date {
     background-color: #aed4e1;
-    margin: 0 -20px 30px -20px;
+    margin: 0 -20px 30px;
   }
   #where section.important {
     border: 4px solid #aed4e1;
@@ -1050,10 +1044,11 @@ footer .email span {
     width: 25%;
   }
   #where .important .date {
-    margin: 0 -30px 30px -30px;
+    margin: 0 -30px 30px;
   }
 }
-#modal-content, #slide img {
+#modal-content,
+#slide img {
   display: none;
 }
 
@@ -1069,26 +1064,25 @@ footer .email span {
 }
 
 #modal-content {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 4px solid #aed4e1;
   box-shadow: 2px 2px 6px 0 rgba(15, 100, 138, 0.35);
-  margin: 5% 1% 0 1%;
+  margin: 5% 1% 0;
   position: absolute;
   width: 98%;
 }
 
 #modal-title {
   background-color: #1c80a9;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.5em;
   font-style: italic;
   padding: 10px 90px 10px 10px;
   text-transform: lowercase;
 }
-
 #modal-title span {
-  display: block;
   color: #b4e9ff;
+  display: block;
   font-size: 0.5185em;
   font-style: normal;
 }
@@ -1098,19 +1092,16 @@ footer .email span {
   border-bottom: 2px solid #b4e9ff;
   padding: 0 0 10px 10px;
 }
-
 #launch a {
-  display: inline-block;
   background-color: #aed4e1;
+  display: inline-block;
   font-size: 0.7777em;
   padding: 2px 10px;
   text-decoration: none;
 }
-
-#launch a:hover,
-#launch a:focus {
+#launch a:hover, #launch a:focus {
   background-color: #eb9000;
-  color: #ffffff;
+  color: #fff;
 }
 
 #modal-description {
@@ -1124,14 +1115,13 @@ footer .email span {
   display: block;
   font-size: 0.875em;
   line-height: 1.4em;
-  padding: 0 20px 20px 20px;
-  margin: 0 0;
+  margin: 0;
+  padding: 0 20px 20px;
 }
 
 #navigation {
   text-align: center;
 }
-
 #navigation a.nav_lft,
 #navigation a.nav_rt {
   display: inline-block;
@@ -1139,38 +1129,33 @@ footer .email span {
   padding: 0 8px;
   text-decoration: none;
 }
-
 #navigation a.thumbnail {
   border: 2px solid #aed4e1;
   display: inline-block;
   margin: 10px 5px;
   opacity: 0.35;
-  transition: opacity 250ms;
+  transition: opacity 0.25s;
 }
-
 #navigation a.thumbnail:hover,
 #navigation a.thumbnail:focus,
 #navigation a.current {
-  display: inline-block;
   background-color: #aed4e1;
+  display: inline-block;
   font-size: 0.7777em;
   opacity: 1;
   text-decoration: none;
 }
 
-#modal-content .close:link,
-#modal-content .close:visited {
+#modal-content .close:link, #modal-content .close:visited {
   color: #aed4e1;
   padding: 20px 20px 10px 10px;
   position: absolute;
+  right: 0;
   text-align: center;
   text-decoration: none;
   top: 0;
-  right: 0;
 }
-
-#modal-content .close:hover,
-#modal-content .close:focus {
+#modal-content .close:hover, #modal-content .close:focus {
   color: #eb9000;
 }
 
@@ -1179,14 +1164,14 @@ footer .email span {
 #navigation a.nav_rt,
 .close span {
   font-family: FontAwesome;
-  font-style: normal;
   font-size: 0.7777em;
+  font-style: normal;
 }
 
 #slide {
   background-image: url("../images/loading.gif");
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
   clear: both;
   min-height: 100px;
   text-align: center;
@@ -1199,28 +1184,28 @@ footer .email span {
   }
 
   #launch {
-    padding-right: 90px;
     padding-left: 90px;
+    padding-right: 90px;
     text-align: center;
   }
 
   #modal-content {
-    margin: 2% 5% 0 5%;
+    margin: 2% 5% 0;
     width: 90%;
   }
 }
 @media only screen and (min-width: 1056px) {
   #modal-content {
-    margin: 2% 10% 0 10%;
+    margin: 2% 10% 0;
     width: 80%;
   }
 
   #modal-title {
     border-bottom: 2px solid #b4e9ff;
     float: left;
-    padding: 10px 10px;
-    width: 70%;
     height: 70px;
+    padding: 10px;
+    width: 70%;
   }
 
   #launch {
