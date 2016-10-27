@@ -2,48 +2,51 @@
 
 // Selection Coloring
 ::-moz-selection {
-    background: $c-accent;
+  background: $c-accent;
   color: $c-white;
-    text-shadow: 2px 2px 0 $c-orange2;
+  text-shadow: 2px 2px 0 $c-orange2;
 }
+
 ::selection {
-    background: $c-accent;
+  background: $c-accent;
   color: $c-white;
-    text-shadow: 2px 2px 0 $c-orange2;
+  text-shadow: 2px 2px 0 $c-orange2;
 }
 
 // global box-sizing
 *,
-*:after,
-*:before {
-  box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-font-smoothing:antialiased;
-  font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 // Browse Happy prompt
 .browsehappy {
-    background: $c-gray-light;
-    color: $c-black;
-    padding: 20px 20px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
+  background: $c-gray-light;
+  color: $c-black;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
 }
 
 // Clear: contain floats
-.clear:before,
-.clear:after {
-    content: " ";
-    display: table;
+.clear::before,
+.clear::after {
+  content: ' ';
+  display: table;
 }
-.clear:after {
-    clear: both;
+
+.clear::after {
+  clear: both;
 }
+
 .clear {
-    *zoom: 1;
+  *zoom: 1;
 }

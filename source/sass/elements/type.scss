@@ -2,26 +2,31 @@
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
 address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
 caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0; padding: 0; border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
 html, button, input, select, textarea {
   color: $c-body;
   font-family: 'Source Sans Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 html {
   font-size: 1.125em;
   font-weight: 300;
   line-height: 1.4em;
-  margin: 0 0;
-  min-height:100%;
-  padding: 0 0;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
   position: relative;
 }
+
 body {
   background-color: $c-blue-light1;
   height: 100%;
 
-  &:after {
+  &::after {
     background: transparent url('../images/background-b.jpg') no-repeat top center;
     background-size: cover;
     content: '';
@@ -33,6 +38,7 @@ body {
     z-index: -1;
   }
 }
+
 hr {
   border: 0;
   border-top: 1px solid $c-gray-light;
@@ -42,65 +48,83 @@ hr {
   margin: 4% 0;
   padding: 0;
 }
-h1, h2 {
+
+h1,
+h2 {
   font-weight: 300;
   line-height: 1.1em;
 }
+
 h2 {
   color: $c-blue-dark3;
   font-size: 1.6em;
-  text-transform: lowercase;
   padding-bottom: 0.5em;
+  text-transform: lowercase;
 }
+
 h3 {
   color: $c-secondary;
   font-size: 1em;
   text-transform: uppercase;
 }
+
 ul {
   list-style: none;
   list-style-position: outside;
   margin: 0 0 1em 1.5em;
 }
+
 ul li {
   text-indent: -0.8em;
 }
-ul li:before {
-  content: "\f105 ";
+
+ul li::before {
+  content: '\f105';
   font-family: FontAwesome;
   font-size: 0.85em;
   padding-right: 10px;
 }
-ul li:hover:before {
+
+ul li:hover::before {
   padding-left: 2px;
   padding-right: 8px;
 }
+
 p {
   padding-bottom: 1em;
 }
+
 strong {
   font-weight: bold;
 }
+
 img {
   height: auto;
-  max-width:100%;
+  max-width: 100%;
 }
+
 video {
-  width: 100% !important;
   height: auto !important;
+  width: 100% !important;
 }
+
 audio,
 canvas,
 img,
 video {
   vertical-align: middle;
 }
-a:link, a:active, a:visited {
+
+a:link,
+a:active,
+a:visited {
   color: $c-secondary;
   text-decoration: underline;
-  transition: all 200ms ease;
+  transition: all 0.2s ease;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   color: $c-accent;
   outline: 0;
 }
