@@ -10,7 +10,7 @@
   }
 
   section:nth-child(2) {
-    border-top: none;
+    border-top: 0;
     margin-top: 0;
   }
 
@@ -25,41 +25,34 @@
     padding: 5px 0 0 0;
   }
 
-   .date {
+  .date {
     margin: 0 -30px 30px -30px;
     padding: 5px 30px;
   }
 
   // -- Where - important
   .important {
+    background: linear-gradient(to bottom,  $c-blue1 0%, $c-blue-dark4 100%);
     background-color: $c-primary;
-    background: -moz-linear-gradient(top,  $c-blue1 0%, $c-blue-dark4 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$c-blue1), color-stop(100%,$c-blue-dark4)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  $c-blue1 0%,$c-blue-dark4 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  $c-blue1 0%,$c-blue-dark4 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-blue1', endColorstr='$c-blue-dark4',GradientType=0 ); /* IE6-9 */
     border-bottom: 4px solid $c-blue-light2;
-    -webkit-box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
-    box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3,0.35);
+    box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3, 0.35);
     color: $c-white;
     font-size: 1.125em;
     margin: -30px -30px 0 -30px;
-    padding: 30px 30px;
+    padding: 30px;
 
     h3 {
       background: transparent url('../images/copious-logo.png') no-repeat top center;
       background-size: contain;
+      height: 60px;
       margin: 0 auto;
       max-width: 100%;
-      height: 60px;
-      width: 200px;
       text-indent: -9999em;
+      width: 200px;
     }
 
     .title {
-      padding: 18px 0 20px 0;
+      padding: 18px 0 20px;
     }
 
     .date {
@@ -83,13 +76,13 @@
 @media only screen and (min-width: 501px) {
 
   #where {
-    position: relative;
-    padding-top: 0;
     margin-top: 40px;
+    padding-top: 0;
+    position: relative;
 
     section.important {
       border: 4px solid $c-blue-light2;
-      margin: -20px 0 0 0;
+      margin: -20px 0 0;
       overflow: visible;
     }
   }
@@ -100,34 +93,40 @@
 
   #where {
     margin-top: 0;
-    padding: 0 0;
+    padding: 0;
+
     section {
-      border-top: none;
+      border-top: 0;
       float: left;
-      margin: 0 0;
-      padding: 45px 20px 20px 20px;
+      margin: 0;
+      padding: 45px 20px 20px;
       width: 25%;
     }
+
     h3 {
       height: 1em;
       line-height: 1em;
     }
+
     .title {
       padding: 20px 0;
     }
+
     .date {
       background-color: $c-blue-light2;
-      margin: 0 -20px 30px -20px;
+      margin: 0 -20px 30px;
     }
-     section.important {
+
+    section.important {
       border: 4px solid $c-blue-light2;
       margin: -30px 4px -20px -4px;
       padding-bottom: 30px;
       position: relative;
       width: 25%;
     }
+
     .important .date {
-      margin: 0 -30px 30px -30px;
+      margin: 0 -30px 30px;
     }
   }
 }

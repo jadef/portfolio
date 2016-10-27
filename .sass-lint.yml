@@ -30,6 +30,7 @@ rules:
   final-newline: 2
   force-attribute-nesting: 0
   force-element-nesting: 0
+  force-pseudo-nesting: 0
   function-name-format:
     - 1
     - allow-leading-underscore: false
@@ -96,7 +97,11 @@ rules:
   quotes:
     - 1
     - style: single
-  shorthand-values: 1
+  shorthand-values:
+    - 1
+    - allowed-shorthands:
+      - 1
+      - 2
   single-line-per-selector: 1
   space-after-bang: 2
   space-after-colon: 2
