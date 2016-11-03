@@ -506,7 +506,7 @@ caption, tbody, tfoot, thead, tr, th, td {
   font-family: 'FontAwesome';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3"), url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot"), url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
 }
 ::-moz-selection {
   background: #eb9000;

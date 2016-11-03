@@ -72,9 +72,9 @@ gulp.task('js', ['js-lint'], function() {
   gulp.src(source + 'scripts/**/*.js')
       .pipe(order([
         // Control folder order this way
-        'source/scripts/modernizr.js',
-        'source/scripts/jquery.simplemodal.js',
-        'source/scripts/retina.js',
+        'source/scripts/vendor/modernizr.js',
+        'source/scripts/vendor/jquery.simplemodal.js',
+        'source/scripts/vendor/retina.js',
         // Our custom onload last
         'source/scripts/onload.js',
         // Catch for any unaccounted for files
@@ -147,6 +147,9 @@ gulp.task('css', ['sass'],  function() {
 gulp.task('sass-lint', function () {
   return gulp.src(source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
+      files: {
+        ignore: '**/vendor/**/*.s@(a|c)ss'
+      },
       configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())

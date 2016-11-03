@@ -5,9 +5,6 @@
 # Rules reference:
 # https://github.com/sasstools/sass-lint/tree/master/docs/rules
 
-files:
-  ignore:
-    - '**/vendor/**/*.s@(a|c)ss'
 options:
   formatter: stylish
   merge-default-rules: true
