@@ -8,6 +8,7 @@ var browserSync = require('browser-sync'), // Browser Sync
     autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
     compass     = require('gulp-compass'), // Compass - Compile Sass
     concat      = require('gulp-concat'), // Concatinate files
+    eslint      = require('gulp-eslint'); // Linting of JavaScript
     imagemin    = require('gulp-imagemin'), // Process Images
     mustache    = require('gulp-mustache'), // Interpolate mustache files
     order       = require('gulp-order'), // Order files
@@ -64,7 +65,7 @@ gulp.task('templates', function() {
 });
 
 // -- Build JS
-gulp.task('js', function() {
+gulp.task('js', ['js-lint'], function() {
 
   gutil.log("Building scripts " + gutil.colors.yellow((isProduction ? "with" : "without")) + " uglification...");
 
@@ -152,6 +153,12 @@ gulp.task('sass-lint', function () {
     .pipe(sassLint.failOnError())
 });
 
+gulp.task('js-lint', function () {
+  return gulp.src(source + 'scripts/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
 
 // ------ Watchers ------
 
