@@ -87,8 +87,8 @@ $(document).ready(function () {
 					$("#navigation").append('<a href="' + current + '" class="' + current + ' thumbnail"><img src="' + thumb + '" /></a>');
 				});
 				current = 1;
-				$("#navigation").prepend('<a href="#" class="nav_lft">&#xf104;</a>');
-				$("#navigation").append('<a href="#" class="nav_rt">&#xf105;</a>');
+				$("#navigation").prepend('<a href="#" class="nav-lft">&#xf104;</a>');
+				$("#navigation").append('<a href="#" class="nav-rt">&#xf105;</a>');
 
 				$("#navigation .thumbnail").click(function (event) {
 					event.preventDefault();
@@ -96,7 +96,7 @@ $(document).ready(function () {
 					grab_slide(current);
 				});
 
-				$("#navigation .nav_lft").click(function (event) {
+				$("#navigation .nav-lft").click(function (event) {
 					event.preventDefault();
 					current--;
 					if (current < 1) {
@@ -104,7 +104,7 @@ $(document).ready(function () {
 					}
 					grab_slide(current);
 				});
-				$("#navigation .nav_rt").click(function (event) {
+				$("#navigation .nav-rt").click(function (event) {
 					event.preventDefault();
 					current++;
 					if (current > slides.length - 1) {

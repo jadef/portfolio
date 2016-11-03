@@ -78,8 +78,8 @@
 #navigation {
   text-align: center;
 
-  a.nav_lft,
-  a.nav_rt {
+  a.nav-lft,
+  a.nav-rt {
     display: inline-block;
     margin-top: 10px;
     padding: 0 8px;
@@ -124,8 +124,8 @@
 }
 
 #launch span,
-#navigation a.nav_lft,
-#navigation a.nav_rt,
+#navigation a.nav-lft,
+#navigation a.nav-rt,
 .close span {
   font-family: FontAwesome;
   font-size: 0.7777em;
