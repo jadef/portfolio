@@ -1,40 +1,42 @@
 // ------ Setup ------
 
 // -- Dependencies
-var browserSync = require('browser-sync'), // Browser Sync
-    del         = require('del'), // Delete
-    fs          = require('fs'), // File System
-    gulp        = require('gulp'), // Base Gulp
-    autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
-    compass     = require('gulp-compass'), // Compass - Compile Sass
-    concat      = require('gulp-concat'), // Concatinate files
-    eslint      = require('gulp-eslint'); // Linting of JavaScript
-    imagemin    = require('gulp-imagemin'), // Process Images
-    mustache    = require('gulp-mustache'), // Interpolate mustache files
-    order       = require('gulp-order'), // Order files
-    plumber     = require('gulp-plumber'), // Pipe error patch
-    sassLint    = require('gulp-sass-lint'), // Linting of Sass
-    sequence    = require('gulp-sequence'), // Order tasks
-    sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
-    uglify      = require('gulp-uglify'), // JS minification
-    gutil       = require('gulp-util'), // Various utilities like colors and noop
-    watch       = require('gulp-watch'); // Watching files
+var
+  browserSync = require('browser-sync'), // Browser Sync
+  del         = require('del'), // Delete
+  fs          = require('fs'), // File System
+  gulp        = require('gulp'), // Base Gulp
+  autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
+  compass     = require('gulp-compass'), // Compass - Compile Sass
+  concat      = require('gulp-concat'), // Concatinate files
+  eslint      = require('gulp-eslint'), // Linting of JavaScript
+  imagemin    = require('gulp-imagemin'), // Process Images
+  mustache    = require('gulp-mustache'), // Interpolate mustache files
+  order       = require('gulp-order'), // Order files
+  plumber     = require('gulp-plumber'), // Pipe error patch
+  sassLint    = require('gulp-sass-lint'), // Linting of Sass
+  sequence    = require('gulp-sequence'), // Order tasks
+  sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
+  uglify      = require('gulp-uglify'), // JS minification
+  gutil       = require('gulp-util'), // Various utilities like colors and noop
+  watch       = require('gulp-watch'); // Watching files
 
 
 // ------ Project Settings ------
 
-var source          = './source/',
-    dest            = './public/',
-    isProduction    = false,
-    browserlist     = ['last 2 versions'],
-    sassStyle       = 'expanded',
-    sourceMap       = true;
+var
+  source          = './source/',
+  dest            = './public/',
+  isProduction    = false,
+  browserlist     = ['last 2 versions'],
+  sassStyle       = 'expanded',
+  sourceMap       = true;
 
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
-    isProduction    = true;
-    sassStyle       = 'compressed';
-    sourceMap       = false;
+  isProduction    = true;
+  sassStyle       = 'compressed';
+  sourceMap       = false;
 }
 
 
@@ -67,7 +69,7 @@ gulp.task('templates', function() {
 // -- Build JS
 gulp.task('js', ['js-lint'], function() {
 
-  gutil.log("Building scripts " + gutil.colors.yellow((isProduction ? "with" : "without")) + " uglification...");
+  gutil.log('Building scripts ' + gutil.colors.yellow((isProduction ? 'with' : 'without')) + ' uglification...');
 
   gulp.src(source + 'scripts/**/*.js')
       .pipe(order([
@@ -93,7 +95,7 @@ gulp.task('js', ['js-lint'], function() {
 
 // -- Build Images
 gulp.task('images', function() {
-  gutil.log("Building " + gutil.colors.yellow("all") + " Images...");
+  gutil.log('Building ' + gutil.colors.yellow('all') + ' Images...');
 
   // TODO: don't rebuild if they exist
 
@@ -108,7 +110,7 @@ gulp.task('images', function() {
 
 // -- Build CSS from Sass
 gulp.task('sass', ['sass-lint'], function() {
-  gutil.log("Building " + gutil.colors.yellow(sassStyle) + " Sass...");
+  gutil.log('Building ' + gutil.colors.yellow(sassStyle) + ' Sass...');
 
   return gulp.src(source + 'sass/styles.scss')
     .pipe(compass({
@@ -127,7 +129,7 @@ gulp.task('sass', ['sass-lint'], function() {
 
 // -- Run processes on CSS
 gulp.task('css', ['sass'],  function() {
-  gutil.log("Formatting " + gutil.colors.yellow(sassStyle) + " CSS...");
+  gutil.log('Formatting ' + gutil.colors.yellow(sassStyle) + ' CSS...');
 
   return gulp.src(dest + 'styles.css')
     .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
@@ -153,7 +155,7 @@ gulp.task('sass-lint', function () {
       configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+    .pipe(sassLint.failOnError());
 });
 
 gulp.task('js-lint', function () {
@@ -173,7 +175,7 @@ gulp.task('watch', ['build'], function() {
     server: {
       baseDir: [dest]
     }
-  })
+  });
 
   // All the watches
   gulp.watch(source + 'index.mustache', ['templates']);
