@@ -5,42 +5,42 @@
   <link>http://www.copio.us/</link>
   <slide id="1">
     <description><![CDATA[
-    Slide 1
+    Home
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Slide 1</title>
-    <image>1.jpg</image>
+    <title>Home</title>
+    <image>home.png</image>
   </slide>
   <slide id="2">
     <description><![CDATA[
-    Slide 2
+    Responsive - Mobile First
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Slide 2</title>
-    <image>2.jpg</image>
+    <title>Responsive</title>
+    <image>responsive.png</image>
   </slide>
   <slide id="3">
     <description><![CDATA[
-    Slide 3
+    Content - ACF
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Slide 3</title>
-    <image>3.jpg</image>
+    <title>Content</title>
+    <image>content.png</image>
   </slide>
   <slide id="4">
     <description><![CDATA[
-    Slide 4
+    Work
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Slide 4</title>
-    <image>4.jpg</image>
+    <title>Work</title>
+    <image>work.png</image>
   </slide>
   <slide id="5">
     <description><![CDATA[
-    Slide 5
+    Work - Single
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>]]></footnote>
-    <title>Slide 5</title>
-    <image>5.jpg</image>
+    <title>Work - Single</title>
+    <image>work2.png</image>
   </slide>
 </portfolio>

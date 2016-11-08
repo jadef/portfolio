@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portfolio>
+  <fulltitle>Yogi Products</fulltitle>
+  <subtitle>(WordPress)</subtitle>
+  <link>http://www.yogiproducts.com/</link>
+  <slide id="1">
+    <description><![CDATA[
+    PDP
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>Home</title>
+    <image>home.png</image>
+  </slide>
+  <slide id="2">
+    <description><![CDATA[
+    Media
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>Nav</title>
+    <image>nav.png</image>
+  </slide>
+  <slide id="3">
+    <description><![CDATA[
+    Blog - integration
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>]]></footnote>
+    <title>Category</title>
+    <image>category.png</image>
+  </slide>
+  <slide id="4">
+    <description><![CDATA[
+    Map
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>PDP</title>
+    <image>pdp.png</image>
+  </slide>
+</portfolio>
