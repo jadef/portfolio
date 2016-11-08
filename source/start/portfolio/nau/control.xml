@@ -2,10 +2,10 @@
 <portfolio>
   <fulltitle>Nau Clothing</fulltitle>
   <subtitle>(Magento programming)</subtitle>
-  <link>http://www.nau.com/</link>
+  <link></link>
   <slide id="1">
     <description><![CDATA[
-    Slide 1
+    Explain client and my role.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Slide 1</title>
@@ -13,7 +13,7 @@
   </slide>
   <slide id="2">
     <description><![CDATA[
-    Slide 2
+    Explain product line and "buying clothes".
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Slide 2</title>
@@ -21,7 +21,7 @@
   </slide>
   <slide id="3">
     <description><![CDATA[
-    Slide 3
+    Magento attributes
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Slide 3</title>
@@ -29,7 +29,7 @@
   </slide>
   <slide id="4">
     <description><![CDATA[
-    Slide 4
+    Subdomain blog that integrates with the site to allow Nau storytelling.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Slide 4</title>
@@ -37,7 +37,7 @@
   </slide>
   <slide id="5">
     <description><![CDATA[
-    Slide 5
+    Magento Categorization mixed with visual callout navigation.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>]]></footnote>
     <title>Slide 5</title>
