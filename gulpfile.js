@@ -191,5 +191,5 @@ gulp.task('watch', ['build'], function() {
 // ------ Builders ------
 
 gulp.task('default', ['watch']);
-gulp.task('compile', sequence('clean', ['js', 'images', 'css'], 'templates', 'start'));
+gulp.task('compile', sequence('clean', ['images', 'js', 'css'], 'templates', 'start'));
 gulp.task('build', sequence('images', 'js', 'css', 'templates'));

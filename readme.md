@@ -5,35 +5,33 @@ This codebase houses the code for [Jade Faist's Portfolio Website](https://www.j
 # Table of Contents
 
 * [Setup](#setup)
-* [Frontend Tools](#frontend-tools)
-  * [Precompilation](#gulp)
+  * [Install NPM dependencies](#install-npm-dependencies)
+* [Precompilation](#precompilation)
+  * [Gulp](#gulp---local)
+  * [Mustache](#mustache)
+  * [Browsersync](#browsersync)
+  * [JavaScript](#javascript)
+  * [Sass](#sass)
 
 
 ------
 
 
 ## Setup
-<!--
-`TODO`
 
-Super simple solution:
+Gulp includes browser-sync. So just follow the following section to run Gulp and it will be opened in your default browser at `http://localhost:5050/`
 
-* `cd public`
-* `python -m SimpleHTTPServer 3050` (or whatever port you want)
-* In browser go to: localhost:3050 -->
+### Install NPM dependencies
 
-Gulp now includes browser-sync. So just follow the following section to run Gulp and it will be opened in your default browser at `http://localhost:5050/`
+`npm install` to get all necessary tooling.
 
-# Frontend Tools
+# Precompilation
 
-## Install NPM dependencies
-`npm install`
+## Gulp - local
 
-## Gulp
+Gulp will have been installed locally. Which  an be triggered via npm scripts. Those can be ran by entering:
 
-Gulp will have been installed globally. You can initiate any gulp tasks from **the project root**. See `gulpfile.js` for everything possible, the most used task will be:
-
-`$ gulp --dev`
+`npm start` - build and watch for development
 
 1. build js in **uncompressed** development mode into design package and creates a source-map file
 2. copy and compress images into design package
@@ -46,26 +44,19 @@ Gulp will have been installed globally. You can initiate any gulp tasks from **t
 
 6. keep watching for changes until stopped (by ctrl+c)
 
+---
 
-### Environment flag
+`npm run build`
 
-Appending `--dev` on any task will save any appropriate js and css files in **uncompressed** development mode as well as generate source-map files.
+**Cleans** the existing public folders and builds all the (js, images, css) one time.
 
+## Gulp - Global
 
-### Watch Tasks
+If you have gulp installed globally, you can initiate any gulp tasks from **the project root**. See `gulpfile.js` for everything possible, the most used task will still be:
 
-`$ gulp` or `$ gulp --dev`: Default build and watch described [above](#gulp).
+`gulp` or `gulp compile --prod`
 
-
-### One Time Tasks
-
-`$ gulp compile`: **Cleans** the existing public folders and builds all the (js, images, css) one time.
-
-`$ gulp build` or `$ gulp build --dev`: Build all (js, images, css) one time.
-
-`$ gulp -v`: Output gulp versions (locally and globally)
-
-### Mustache
+## Mustache
 
 `TODO`
 
@@ -73,13 +64,13 @@ Appending `--dev` on any task will save any appropriate js and css files in **un
 
 `TODO`
 
-### JavaScript
+## JavaScript
 
 When *Gulp* is initiated or changes made when watching any js file saved in the `source/scripts/` folder.
 
 All js will be concatinated into a single file: `public/scripts.js`
 
-### Sass
+## Sass
 
 When *Gulp* is watching any Sass file saved in the `source/sass/` folder.
 

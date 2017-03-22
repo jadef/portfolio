@@ -2,7 +2,15 @@
   "name": "jadef-portfolio",
   "version": "1.0.0",
   "description": "Jade Faist Portfolio Site",
-  "main": "gulpfile.js",
+  "author": "Jade Faist",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:jadef/portfolio.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "del": "^2.2.2",
@@ -23,13 +31,9 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11"
   },
-  "dependencies": {
-    "mustache": "^2.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:jadef/portfolio.git"
-  },
-  "author": "Jade Faist",
-  "license": "ISC"
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp --dev",
+    "build": "gulp compile --prod"
+  }
 }
