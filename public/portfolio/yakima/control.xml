@@ -5,42 +5,42 @@
   <link>http://www.yakima.com/</link>
   <slide id="1">
     <description><![CDATA[
-    Commitment type product that must properly educate and confirm for the user.
+    Homepage.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>PDP</title>
-    <image>pdp.png</image>
+    <title>home</title>
+    <image>home@2x.jpg</image>
   </slide>
   <slide id="2">
     <description><![CDATA[
-    Giving multiple media images for products to showcase all the aspects.
+    PDP - commitment type product that must properly educate and confirm for the user.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Media</title>
-    <image>media.png</image>
+    <title>PDP</title>
+    <image>pdp@2x.jpg</image>
   </slide>
   <slide id="3">
+    <description><![CDATA[
+    Fit.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br> <small>Fit has been refactored since my involvement.</small>]]></footnote>
+    <title>Fit</title>
+    <image>fit@2x.jpg</image>
+  </slide>
+  <slide id="4">
     <description><![CDATA[
     Blog - integration to weave in the Yakima lifestle
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>]]></footnote>
     <title>Blog - integration</title>
-    <image>blog-integration.png</image>
+    <image>blog@2x.jpg</image>
   </slide>
-  <slide id="4">
+  <slide id="5">
     <description><![CDATA[
     Give omnichannel options for those that want to shop locally (as well as find installers).
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Map</title>
-    <image>map.png</image>
-  </slide>
-  <slide id="5">
-    <description><![CDATA[
-    Multiple modal interstitials are designed to acknowledge and validate the user's choices.
-    ]]></description>
-    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
-    <title>Modal</title>
-    <image>modal.png</image>
+    <image>map@2x.jpg</image>
   </slide>
 </portfolio>
