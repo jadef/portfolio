@@ -33,7 +33,9 @@
   },
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp --dev",
+    "start": "gulp",
+    "clean": "gulp clean",
+    "restart": "gulp start",
     "build": "gulp compile --prod"
   }
 }

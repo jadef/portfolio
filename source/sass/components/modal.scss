@@ -128,6 +128,7 @@
     border: 2px solid $c-blue-light2;
     display: inline-block;
     margin: 10px 5px;
+    max-width: 35px;
     opacity: 0.35;
     transition: all 0.25s;
   }
@@ -150,6 +151,10 @@
   clear: both;
   min-height: 100px;
   text-align: center;
+
+  img {
+    max-width: 926px;
+  }
 }
 
 // ----- 501px Break
