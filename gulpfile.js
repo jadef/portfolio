@@ -74,8 +74,6 @@ gulp.task('js', ['js-lint'], function() {
   gulp.src(source + 'scripts/**/*.js')
       .pipe(order([
         // Control folder order this way
-        'source/scripts/vendor/modernizr.js',
-        'source/scripts/vendor/jquery.simplemodal.js',
         'source/scripts/vendor/retina.js',
         // Our custom onload last
         'source/scripts/onload.js',
