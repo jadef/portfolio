@@ -5,42 +5,42 @@
   <link></link>
   <slide id="1">
     <description><![CDATA[
-    Copious Homepage.
+    Completely custom built specifically for Copious, I got to work directly with all departments as the senior and primary developer for this in-house site rebuild.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
     <title>Home</title>
-    <image>home.png</image>
+    <image>home@2x.jpg</image>
   </slide>
   <slide id="2">
     <description><![CDATA[
-    Responsive - Mobile First
+    Getting to pick all the architecture decisions, we focused on developing a mobile first, cleanly responsive design.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
     <title>Responsive</title>
-    <image>responsive.png</image>
+    <image>responsive@2x.jpg</image>
   </slide>
   <slide id="3">
     <description><![CDATA[
-    Content - ACF
-    ]]></description>
-    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
-    <title>Content</title>
-    <image>content.png</image>
-  </slide>
-  <slide id="4">
-    <description><![CDATA[
-    Work
+    Showcasing Copious’ beautiful work was an obvious priority.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
     <title>Work</title>
-    <image>work.png</image>
+    <image>work-index@2x.jpg</image>
   </slide>
-  <slide id="5">
+  <slide id="4">
     <description><![CDATA[
-    Work - Single
+    Each work case study could be customized with a unique color pallet that weaves content and branding together.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
     <title>Work - Single</title>
-    <image>work2.png</image>
+    <image>work@2x.jpg</image>
+  </slide>
+  <slide id="5">
+    <description><![CDATA[
+    As well as needing to have visual presence, aspects of the site are content rich but didn’t want to feel templatized. Using custom fields, multiple users could maintain and contribute to the content of the site but have unique layouts associated for different purposes.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.</small>]]></footnote>
+    <title>Content</title>
+    <image>content@2x.jpg</image>
   </slide>
 </portfolio>
