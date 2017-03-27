@@ -5,42 +5,42 @@
   <link></link>
   <slide id="1">
     <description><![CDATA[
-    Explain client and my role.
+    Nau, a high end clothing company started in Portland has a large online aspect to their company. I was the front end lead on this new direct to consumer Magento site. Getting to work with Copious’ design team to plan a visual rich, interactive experience.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.]]></footnote>
-    <title>Slide 1</title>
-    <image>home.png</image>
+    <title>nau.com</title>
+    <image>home@2x.jpg</image>
   </slide>
   <slide id="2">
     <description><![CDATA[
-    Explain product line and "buying clothes".
+    Traditional e-commerce shopping structure has additional features like image swapping and video callouts directly in the category pages.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.]]></footnote>
-    <title>Slide 2</title>
-    <image>category.png</image>
+    <title>Category</title>
+    <image>category@2x.jpg</image>
   </slide>
   <slide id="3">
     <description><![CDATA[
-    Magento attributes
+    The products leverage Magento attributes including, but beyond color and size to create informative product information and associated content that makes the PDPs much more than just a buy button.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.]]></footnote>
-    <title>Slide 3</title>
-    <image>pdp.png</image>
+    <title>PDP</title>
+    <image>pdp@2x.jpg</image>
   </slide>
   <slide id="4">
     <description><![CDATA[
-    Subdomain blog that integrates with the site to allow Nau storytelling.
+    A separate subdomain blog was made (wordpress) that integrates with the site to allow Nau storytelling.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.]]></footnote>
-    <title>Slide 4</title>
-    <image>blog.png</image>
+    <title>Blog</title>
+    <image>blog@2x.jpg</image>
   </slide>
   <slide id="5">
     <description><![CDATA[
-    Magento Categorization mixed with visual callout navigation.
+    The menu module was created to use Magento Categorization mixed with visual content blocks, all maintainable by the merchandising team.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.<br>  <small>Public site has since been rebuilt.]]></footnote>
-    <title>Slide 5</title>
-    <image>nav.png</image>
+    <title>Menu</title>
+    <image>nav@2x.jpg</image>
   </slide>
 </portfolio>
