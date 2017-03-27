@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <portfolio>
   <fulltitle>Yogi Products</fulltitle>
-  <subtitle>(WordPress)</subtitle>
+  <subtitle>(WordPress programming)</subtitle>
   <link>http://www.yogiproducts.com/</link>
   <slide id="1">
     <description><![CDATA[
-    Explain Yogi client and my role
+    Yogi is an industry leader in natural teas. As Technical lead from the start of the engagement I worked on taking an existing legacy site and refreshing/expanding the site to better educate users and expand their brand.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Home</title>
@@ -13,7 +13,7 @@
   </slide>
   <slide id="2">
     <description><![CDATA[
-    A unique experience in that it's an information site first and formost, but geared toward retail product and getting to and educating about the products.
+    A unique experience in that it is an information site first and foremost, but geared toward a retail product audience. The IA needed to make sure users felt like they were being led to the right teas without unnecessary complexity.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Nav</title>
@@ -21,7 +21,7 @@
   </slide>
   <slide id="3">
     <description><![CDATA[
-    Show the user available products, but guide them to what they're interested in.
+    Evoking the experience of e-commerce organization, the categorization shows the user available products, but guides them to what they're interested in.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Category</title>
@@ -29,7 +29,7 @@
   </slide>
   <slide id="4">
     <description><![CDATA[
-    The PDP is most important to showcase the product.
+    The content rich product display page was important to really showcase and educate about the individual products. The interesting difference to e-commerce being that the primary call to action is to help find the product in your local grocery store.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>PDP</title>
