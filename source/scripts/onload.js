@@ -5,8 +5,8 @@ $(document).ready(function () {
 
   // ------- Smooth Anchor Scrolling
   $(function () {
-    $('a[href*=#]:not([href=#])').click(function () {
-      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+    $('a').on('click', function () {
+      if (this.hash !== '') {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
     $('#scroller #slide').addClass('loading').attr('title', slides[current][0]).html('<img src="' + slides[current][1] + '" alt="' + slides[current][0] + '" />');
     $('#navigation .current').removeClass('current');
     $('#navigation .thumbnail.' + current).addClass('current');
-    $('#scroller #slide img').load(function () {
+    $('#scroller #slide img').on('load', function() {
       if ($(window).width() < 1056) {
         h = $('#modal-title').outerHeight() + $('#launch').outerHeight() + $('#navigation').outerHeight() + $('#modal-description').outerHeight() + $('#modal-footnote').outerHeight() + $('#scroller #slide img').outerHeight() + 8; // 8 is borders
       } else {
