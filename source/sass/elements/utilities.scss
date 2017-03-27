@@ -22,17 +22,6 @@
   text-rendering: optimizeLegibility;
 }
 
-// Browse Happy prompt
-.browsehappy {
-  background: $c-gray-light;
-  color: $c-black;
-  padding: 20px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-}
-
 // Clear: contain floats
 .clear::before,
 .clear::after {
