@@ -5,7 +5,7 @@
   <link>http://www.rejuvenation.com</link>
   <slide id="1">
     <description><![CDATA[
-    Rejuvenation is a Williams Sonoma brand lighting, hardware and home decor company started in Portland Oregon. As the technical lead for our engineers, I worked closely with the client’s web team as well as Copious' project managers and design team to guide functional planning and making sure our engineering team could build the best product.
+    Rejuvenation is a Williams Sonoma brand lighting, hardware and home decor company, based in Portland Oregon. As the technical lead, I worked closely with the client’s web team as well as Copious' project managers and designers to guide functional planning and making sure our engineering team could build the best product.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>rejuvenation.com</title>
@@ -13,7 +13,7 @@
   </slide>
   <slide id="2">
     <description><![CDATA[
-    A major initiative of the custom e-com application is driven by Backbone and Elasticsearch building fast, responsive and feature rich product categories.
+    A major initiative of the custom e-commmerce application is driven by Backbone and Elasticsearch to build a fast, responsive and feature rich product categories.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Category Page</title>
@@ -21,7 +21,7 @@
   </slide>
   <slide id="3">
     <description><![CDATA[
-    The unique nature of the Rejuvenation products means that multiple product types exist. From a simple product (including antique and vintage), collections of products (shown here) to complex configurable products (next).
+    The unique nature of the Rejuvenation products requires multiple product types. From a simple product (including antique and vintage), collections of products (shown here) to complex configurable products (next).
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Collection Product</title>
@@ -29,7 +29,7 @@
   </slide>
   <slide id="4">
     <description><![CDATA[
-    Configurable products add up to millions of possible combinations so the application caches popular combinations but then interfaces with their PIM/ERP to look up attribute combinations for the user.
+    Configurable products add up to millions of possible combinations. The application caches popular combinations and then interfaces with their PIM/ERP to look up attribute combinations for the user.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
     <title>Configurable Product</title>
@@ -37,7 +37,7 @@
   </slide>
   <slide id="5">
     <description><![CDATA[
-    The obvious driving factors of an e-commerce site for a company like Rejuvenation is two fold: user experience + conversions. Being a custom application we had control of feature lists that touched all aspects of the site, such as the cart and checkout, where we could follow best practices but also constantly improve the experience.
+    The obvious driving factors of an e-commerce site for a company like Rejuvenation is two fold: user experience + conversions. As a custom application we had full control of feature lists that touched all aspects of the site (such as the cart and checkout) where we could follow best practices while intentionally improving the experience.
     ]]></description>
     <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>]]></footnote>
     <title>Checkout</title>
