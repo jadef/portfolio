@@ -12,6 +12,7 @@ This codebase houses the code for [Jade Faist's Portfolio Website](https://www.j
   * [Browsersync](#browsersync)
   * [JavaScript](#javascript)
   * [Sass](#sass)
+* [Deployment](#deployment)
 
 
 ------
@@ -75,3 +76,9 @@ All js will be concatinated into a single file: `public/scripts.js`
 When *Gulp* is watching any Sass file saved in the `source/sass/` folder.
 
 All Sass will compile into a single css file: `/public/main.css`
+
+# Deployment
+
+use the bash script to automatically package and deploy the public folder:
+
+`bash ./utils/deploy.sh`
