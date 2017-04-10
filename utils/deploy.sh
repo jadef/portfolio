@@ -54,6 +54,7 @@ function prepare_release() {
   echo "Preparing release..."
 
   echo 'TODO: run build npm script here.'
+  echo 'TODO: ignore .DS_Store files in package'
 
   ## Package release
   # move into the release directory so the tarball deflates in place
