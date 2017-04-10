@@ -5,13 +5,13 @@ This codebase houses the code for [Jade Faist's Portfolio Website](https://www.j
 # Table of Contents
 
 * [Setup](#setup)
-  * [Install NPM dependencies](#install-npm-dependencies)
+    * [Install NPM dependencies](#install-npm-dependencies)
 * [Precompilation](#precompilation)
-  * [Gulp](#gulp---local)
-  * [Mustache](#mustache)
-  * [Browsersync](#browsersync)
-  * [JavaScript](#javascript)
-  * [Sass](#sass)
+    * [Gulp](#gulp---local)
+    * [Mustache](#mustache)
+    * [JavaScript](#javascript)
+    * [Sass](#sass)
+    * [Linting](#linting)
 * [Deployment](#deployment)
 
 
@@ -63,6 +63,10 @@ All js will be concatinated into a single file: `public/scripts.js`
 When *Gulp* is watching any Sass file saved in the `source/sass/` folder.
 
 All Sass will compile into a single css file: `/public/styles.css`
+
+## Linting
+
+`TODO`
 
 # Deployment
 
