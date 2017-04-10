@@ -18,11 +18,11 @@ This codebase houses the code for [Jade Faist's Portfolio Website](https://www.j
 ------
 
 
-## Setup
+# Setup
 
 Gulp includes browser-sync. So just follow the following section to run Gulp and it will be opened in your default browser at `http://localhost:5050/`
 
-### Install NPM dependencies
+## Install NPM dependencies
 
 `npm install` to get all necessary tooling.
 
@@ -37,19 +37,10 @@ Gulp will have been installed locally. Which  an be triggered via npm scripts. T
 1. build js in **uncompressed** development mode into design package and creates a source-map file
 2. copy and compress images into design package
 3. build css in **uncompressed** development mode into design package and creates a source-map file
-4. watches the following folders
+4. watches the following `source` folder
+5. keep watching for changes until stopped (by ctrl+c)
 
-* source/scripts
-* source/images
-* source/sass
-
-6. keep watching for changes until stopped (by ctrl+c)
-
----
-
-`npm run build`
-
-**Cleans** the existing public folders and builds all the (js, images, css) one time.
+`npm run build` - **Cleans** the existing public folders and builds all the *source* to *public* one time.
 
 ## Gulp - Global
 
@@ -58,10 +49,6 @@ If you have gulp installed globally, you can initiate any gulp tasks from **the 
 `gulp` or `gulp compile --prod`
 
 ## Mustache
-
-`TODO`
-
-### BrowserSync
 
 `TODO`
 
@@ -75,7 +62,7 @@ All js will be concatinated into a single file: `public/scripts.js`
 
 When *Gulp* is watching any Sass file saved in the `source/sass/` folder.
 
-All Sass will compile into a single css file: `/public/main.css`
+All Sass will compile into a single css file: `/public/styles.css`
 
 # Deployment
 
