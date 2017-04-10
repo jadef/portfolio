@@ -79,6 +79,6 @@ All Sass will compile into a single css file: `/public/main.css`
 
 # Deployment
 
-use the bash script to automatically package and deploy the public folder:
+use the bash script to automatically package and deploy the public folder (requires SSH auth set up):
 
 `bash ./utils/deploy.sh`

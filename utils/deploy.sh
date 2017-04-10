@@ -33,7 +33,6 @@ function check_dependencies() {
     echo -e "FATAL: utility 'unzip' not found!\n\t$(whereis unzip)"
     exit 1
   fi
-  # test the Codeship deploy key
   ssh "${ssh_opts}" "${deploy_connect}" "true"
   rc=$?
   if [ $rc -ne 0 ]
