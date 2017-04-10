@@ -30,7 +30,7 @@ Gulp includes browser-sync. So just follow the following section to run Gulp and
 
 ## Gulp - local
 
-Gulp will have been installed locally. Which  an be triggered via npm scripts. Those can be ran by entering:
+Gulp will have been installed locally. Which can be triggered via npm scripts. Those can be ran by entering:
 
 `npm start` - build and watch for development
 
@@ -50,7 +50,7 @@ If you have gulp installed globally, you can initiate any gulp tasks from **the 
 
 ## Mustache
 
-`TODO`
+`TODO - Explain templating`
 
 ## JavaScript
 
@@ -66,7 +66,7 @@ All Sass will compile into a single css file: `/public/styles.css`
 
 ## Linting
 
-`TODO`
+`TODO - Explain linting`
 
 # Deployment
 
