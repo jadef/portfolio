@@ -1,0 +1,126 @@
+// ----- Base styles
+html,
+button,
+input,
+select,
+textarea {
+  color: $c-body;
+  font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+html {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  background-color: $c-blue-light1;
+  height: 100%;
+
+  &::after {
+    background: transparent url('../images/background-b.jpg') no-repeat top center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $c-gray-light;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 4% 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.1em;
+}
+
+h2 {
+  color: $c-blue-dark3;
+  font-size: 1.6em;
+  padding-bottom: 0.5em;
+  text-transform: lowercase;
+}
+
+h3 {
+  color: $c-secondary;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  list-style-position: outside;
+  margin: 0 0 1em 1.5em;
+}
+
+ul li {
+  text-indent: -0.8em;
+}
+
+ul li::before {
+  content: '\f105';
+  font-family: FontAwesome;
+  font-size: 0.85em;
+  padding-right: 10px;
+}
+
+ul li:hover::before {
+  padding-left: 2px;
+  padding-right: 8px;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+video {
+  height: auto !important;
+  width: 100% !important;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: $c-secondary;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: $c-accent;
+  outline: 0;
+}

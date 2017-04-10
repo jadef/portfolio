@@ -1,0 +1,22 @@
+
+        {{# position-primary }}
+        <section class="entry important">
+          <h3>{{ company }}</h3>
+          <span class="title">{{ title }}</span>
+          <span class="date">{{ date }}</span>
+          <p>{{ description }}</p>
+          <p class="responsibilities"><strong>Responsibilities:</strong> {{# responsibilities }}<span>{{ . }}</span> {{/ responsibilities }}</p>
+          {{{ link }}}
+        </section><!-- .important -->
+        {{/ position-primary }}
+
+        {{# position }}
+        <section class="entry">
+          <h3>{{ company }}</h3>
+          <span class="title">{{ title }}</span>
+          <span class="date">{{ date }}</span>
+          <p>{{ description }}</p>
+          <p class="responsibilities"><strong>Responsibilities:</strong> {{# responsibilities }}<span>{{ . }}</span> {{/ responsibilities }}</p>
+          {{{ link }}}
+        </section><!-- .entry -->
+        {{/ position }}

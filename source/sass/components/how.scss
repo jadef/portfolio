@@ -1,0 +1,18 @@
+// ----- How
+#how .programming ul {
+  margin-bottom: 0;
+}
+
+// ----- 1056px break
+@media only screen and (min-width: 1056px) {
+
+  #how div {
+    float: left;
+    padding: 0 5% 0 0;
+    width: 50%;
+  }
+
+  #how .design {
+    padding-top: 45px;
+  }
+}

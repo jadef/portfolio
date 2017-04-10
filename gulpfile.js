@@ -1,126 +1,193 @@
-// ---- Setup ----
+// ------ Setup ------
+
 // -- Dependencies
-var gulp = require('gulp'),
-    del = require('del'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    livereload = require('gulp-livereload'),
-    compass = require('gulp-compass'),
-    watch = require('gulp-watch'),
-    gutil = require('gulp-util'),
-    order = require('gulp-order'),
-    sequence = require('gulp-sequence'),
-    sourcemaps = require('gulp-sourcemaps'),
-    imagemin = require('gulp-imagemin');
+var
+  browserSync = require('browser-sync'), // Browser Sync
+  del         = require('del'), // Delete
+  fs          = require('fs'), // File System
+  gulp        = require('gulp'), // Base Gulp
+  autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
+  compass     = require('gulp-compass'), // Compass - Compile Sass
+  concat      = require('gulp-concat'), // Concatinate files
+  eslint      = require('gulp-eslint'), // Linting of JavaScript
+  imagemin    = require('gulp-imagemin'), // Process Images
+  mustache    = require('gulp-mustache'), // Interpolate mustache files
+  order       = require('gulp-order'), // Order files
+  plumber     = require('gulp-plumber'), // Pipe error patch
+  sassLint    = require('gulp-sass-lint'), // Linting of Sass
+  sequence    = require('gulp-sequence'), // Order tasks
+  sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
+  uglify      = require('gulp-uglify'), // JS minification
+  gutil       = require('gulp-util'), // Various utilities like colors and noop
+  watch       = require('gulp-watch'); // Watching files
 
-// ---- Project Settings ----
 
-// Allows gulp --dev to be run for a more verbose output
-var isProduction = true;
-var sassStyle = 'compressed';
-var sourceMap = false;
-var isWatching = false;
+// ------ Project Settings ------
 
-if (gutil.env.dev === true) {
-    sassStyle = 'expanded';
-    sourceMap = true;
-    isProduction = false;
+var
+  source          = './source/',
+  dest            = './public/',
+  isProduction    = false,
+  browserlist     = ['last 2 versions'],
+  sassStyle       = 'expanded',
+  sourceMap       = true;
+
+// Allows gulp --prod to be run for the compressed output
+if (gutil.env.prod === true) {
+  isProduction    = true;
+  sassStyle       = 'compressed';
+  sourceMap       = false;
 }
 
-// ---- Tasks ----
+
+// ------ Tasks ------
 
 // -- Clean up
 gulp.task('clean', function() {
-    del(['public/scripts/*',
-        'public/images/*',
-        'public/styles/*'], function (errors, paths) {
+  del([dest + '**/*']).then( paths => {
+    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), paths.join('\n'));
+  });
+});
 
-        console.log('Deleted compiled files/folders:\n', paths.join('\n'));
-    });
+// -- Starter files
+gulp.task('start', function() {
+  return gulp.src([source + 'start/**/*'])
+    .pipe(gulp.dest(dest));
+});
+
+// -- Build Templates
+gulp.task('templates', function() {
+  var model = JSON.parse(fs.readFileSync(source + 'model.json', 'utf8'));
+
+  return gulp.src(source + 'index.mustache')
+    .pipe(plumber())
+    .pipe(mustache(model, { extension: '.html' }))
+    .pipe(gulp.dest(dest))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 // -- Build JS
-gulp.task('js', function(){
-    console.log("Building scripts " + (isProduction ? "with" : "no") + " uglification...");
+gulp.task('js', ['js-lint'], function() {
 
-    gulp.src('source/scripts/**/*.js')
-        .pipe(order([
-            // Control folder order this way
-            'source/scripts/modernizr.js',
-            'source/scripts/jquery.simplemodal.js',
-            'source/scripts/retina.js',
-            // Our custom onload last
-            'source/scripts/onload.js',
-            // Catch for any unaccounted for files
-            'source/scripts/**/*.js'
-        ], {base: 'source/scripts/'}))
-        .pipe(sourcemaps.init())
-        .pipe(concat('scripts.js'))
-        .pipe(isProduction ? uglify({mangle: false, preserveComments: 'some'}) : gutil.noop())
-        .pipe(isProduction ? gutil.noop() : sourcemaps.write('.'))
-        .pipe(gulp.dest('public/scripts/'))
-        .on('error', function (error) {
-            console.log(error);
-        });
+  gutil.log('Building scripts ' + gutil.colors.yellow((isProduction ? 'with' : 'without')) + ' uglification...');
+
+  gulp.src(source + 'scripts/**/*.js')
+      .pipe(order([
+        // Control folder order this way
+        'source/scripts/vendor/retina.js',
+        // Our custom onload last
+        'source/scripts/onload.js',
+        // Catch for any unaccounted for files
+        'source/scripts/**/*.js'
+      ], {base: source + 'scripts/'}))
+      .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
+      .pipe(concat('scripts.js'))
+      .pipe(isProduction ? uglify({mangle: true}) : gutil.noop())
+      .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
+      .pipe(gulp.dest(dest))
+      .pipe(browserSync.reload({ stream: true }))
+      .on('error', function (error) {
+        gutil.log(error);
+      });
 });
 
 // -- Build Images
 gulp.task('images', function() {
-    console.log("Building Images...");
+  gutil.log('Building ' + gutil.colors.yellow('all') + ' Images...');
 
-    // TODO: don't rebuild if they exist
+  // TODO: don't rebuild if they exist
 
-    gulp.src('source/images/**/*')
-        .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-        .pipe(gulp.dest('public/images'))
-        .on('error', function (error) {
-            console.log(error);
-        });
+  gulp.src(source + 'images/**/*')
+    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+    .pipe(gulp.dest(dest + 'images/'))
+    .pipe(browserSync.reload({ stream: true }))
+    .on('error', function (error) {
+      gutil.log(error);
+    });
 });
 
-// -- Build CSS
-// only builds primary project css
-gulp.task('sass', function() {
-    console.log("Building " + sassStyle + " Sass...");
+// -- Build CSS from Sass
+gulp.task('sass', ['sass-lint'], function() {
+  gutil.log('Building ' + gutil.colors.yellow(sassStyle) + ' Sass...');
 
-    return gulp.src('source/sass/main.scss')
-        .pipe(compass({
-            config_file: 'config.rb',
-            sass: 'source/sass',
-            css: 'public/styles',
-            style: sassStyle,
-            sourcemap: sourceMap,
-            comments: isProduction,
-            debug: isProduction
-        }))
-        .on('error', function (error) {
-            console.log(error);
-        });
+  return gulp.src(source + 'sass/styles.scss')
+    .pipe(compass({
+      require: ['compass/import-once/activate'],
+      sass: source + 'sass/',
+      css: dest,
+      style: sassStyle,
+      sourcemap: sourceMap,
+      comments: isProduction,
+      debug: isProduction
+    }))
+    .on('error', function (error) {
+      gutil.log(error);
+    });
 });
 
-// ---- Utility Tasks ----
+// -- Run processes on CSS
+gulp.task('css', ['sass'],  function() {
+  gutil.log('Formatting ' + gutil.colors.yellow(sassStyle) + ' CSS...');
 
-// -- Livereload
-gulp.task('livereload', function() { livereload.changed(); });
+  return gulp.src(dest + 'styles.css')
+    .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
+    .pipe(autoprefixer({
+      browsers: browserlist
+    }))
+    .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
+    .pipe(gulp.dest(dest))
+    .pipe(browserSync.reload({ stream: true }))
+    .on('error', function (error) {
+      gutil.log(error);
+    });
+});
 
-// ---- Watchers ----
+// ------ Utilities ------
 
-// -- Watch and compile SASS changes
+gulp.task('sass-lint', function () {
+  return gulp.src(source + 'sass/**/*.s+(a|c)ss')
+    .pipe(sassLint({
+      files: {
+        ignore: '**/vendor/**/*.s@(a|c)ss'
+      },
+      configFile: './.sass-lint.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+gulp.task('js-lint', function () {
+  return gulp.src(source + 'scripts/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+// ------ Watchers ------
+
+// -- Watch, Sync, Build... repeat
 gulp.task('watch', ['build'], function() {
-    isWatching = true;
-    livereload.listen();
+  browserSync({
+    notify: false,
+    port: 5050,
+    server: {
+      baseDir: [dest]
+    }
+  });
 
-    //Watch SCSS and CSS for changes, compile compass and run livereload on change
-    gulp.watch('source/sass/**/*.scss', ['sass']);
-    gulp.watch('source/scripts/**/*.js', ['js']);
-    gulp.watch('public/scripts/**/*.js', livereload.changed);
-    gulp.watch('source/images/**/*', ['images']);
-    gulp.watch('public/styles/**/*.css', livereload.changed);
+  // All the watches
+  gulp.watch(source + 'index.mustache', ['templates']);
+  gulp.watch(source + 'templates/**/*.mustache', ['templates']);
+  gulp.watch(source + 'sass/**/*.scss', ['css']);
+  gulp.watch(source + 'scripts/**/*.js', ['js']);
+  gulp.watch(source + 'images/**/*', ['images']);
+  gulp.watch(source + 'model.json', ['templates']);
 
 });
+
+
+// ------ Builders ------
 
 gulp.task('default', ['watch']);
-
-// ---- Builders ----
-gulp.task('compile', sequence('clean', ['js', 'images'], 'sass'));
-gulp.task('build', sequence('images', 'js', 'sass'));
+gulp.task('compile', sequence('clean', ['images', 'js', 'css'], 'templates', 'start'));
+gulp.task('build', sequence('images', 'js', 'css', 'templates'));

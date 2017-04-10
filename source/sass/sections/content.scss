@@ -1,0 +1,98 @@
+// ----- Content
+header,
+#content {
+  margin: 0 auto;
+  max-width: 1420px;
+}
+
+#who,
+#what,
+#where,
+#how,
+#education {
+  margin-bottom: 30px;
+}
+
+#intro,
+#where,
+#how,
+#education,
+.section,
+footer {
+  background-color: rgba($c-white, 0.9);
+  border-bottom: 3px solid $c-blue-light2;
+  border-top: 3px solid $c-blue-light2;
+  box-shadow: 2px 2px 6px 0 rgba($c-blue-dark3, 0.35);
+  padding: 30px;
+}
+
+
+// ----- 501px Break
+@media only screen and (min-width: 501px) {
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #intro,
+  #where,
+  #how,
+  #education,
+  .section {
+    border: 3px solid $c-blue-light2;
+    margin: 0 2% 30px 2%;
+    padding: 30px;
+  }
+
+  #intro {
+    display: flex;
+    width: 96%;
+
+    .content {
+      flex-basis: 60%;
+    }
+  }
+
+  #contact {
+    margin: 0 0 4% 4%;
+    width: 40%;
+  }
+
+  #where {
+    width: 96%;
+  }
+
+  #how,
+  #education {
+    width: 46%;
+  }
+}
+
+// ----- 1056px break
+@media only screen and (min-width: 1056px) {
+  #who {
+    float: left;
+    margin: 0 2% 4% 2% ;
+    width: 33.5%;
+  }
+
+  #what {
+    float: left;
+    width: 58.5%;
+  }
+
+  #intro,
+  #contact {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  footer {
+    border: 3px solid $c-blue-light2;
+    margin: 0 auto;
+    padding: 30px;
+    width: 30%;
+  }
+}

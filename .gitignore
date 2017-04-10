@@ -22,6 +22,7 @@ TODO.md
 *.sqlite
 *.tmp
 *.bak
+*.map
 
 # OS generated files #
 ######################

@@ -1,0 +1,34 @@
+// ----- Random Bits
+
+// Selection Coloring
+::-moz-selection {
+  background: $c-accent;
+  color: $c-white;
+  text-shadow: 2px 2px 0 $c-orange2;
+}
+
+::selection {
+  background: $c-accent;
+  color: $c-white;
+  text-shadow: 2px 2px 0 $c-orange2;
+}
+
+// global box-sizing
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// Clear: contain floats
+.clear::before,
+.clear::after {
+  content: ' ';
+  display: table;
+}
+
+.clear::after {
+  clear: both;
+}

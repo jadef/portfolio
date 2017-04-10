@@ -1,0 +1,46 @@
+    <div id="content" class="clear">
+
+      <div id="who">
+        <div id="intro">
+          {{# description }}
+          <div class="content">
+            {{{ content }}}
+          </div>
+          {{/ description }}
+          <div id="contact">
+          {{> contact }}
+          </div><!-- #contact -->
+        </div><!-- #intro -->
+      </div><!-- #Who -->
+
+      <ul id="what">
+      {{> what }}
+      </ul><!-- #work -->
+
+      <div id="where">
+      {{> where }}
+      </div><!-- #experience -->
+
+      <div id="how">
+        <div class="programming">
+          <h2>Proficiencies</h2>
+          <ul>
+          {{# proficiencies-a }}
+            <li>{{{ . }}}</li>
+          {{/ proficiencies-a }}
+          </ul>
+        </div>
+        <div class="design">
+          <ul>
+          {{# proficiencies-b }}
+            <li>{{{ . }}}</li>
+          {{/ proficiencies-b }}
+          </ul>
+        </div>
+      </div><!-- #skill -->
+
+      <div id="education">
+      {{> education }}
+      </div><!-- #education -->
+
+    </div><!-- #content -->

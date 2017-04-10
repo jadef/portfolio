@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portfolio>
+  <fulltitle>Yogi Products</fulltitle>
+  <subtitle>(WordPress programming)</subtitle>
+  <link>http://www.yogiproducts.com/</link>
+  <slide id="1">
+    <description><![CDATA[
+    Yogi is an industry leader in natural teas. As the technical lead I worked to transform their existing legacy site and refresh the site to better educate users and expand their brand.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>Home</title>
+    <image>home@2x.jpg</image>
+  </slide>
+  <slide id="2">
+    <description><![CDATA[
+    While geared toward a retail product audience, Yogi’s website is informational at the core. The IA ensures users feel guided to the right teas without unnecessary complexity.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>Nav</title>
+    <image>nav@2x.jpg</image>
+  </slide>
+  <slide id="3">
+    <description><![CDATA[
+    Evoking the experience of e-commerce organization, the categorization shows the user available products, but guides them to what they're interested in.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>Category</title>
+    <image>category@2x.jpg</image>
+  </slide>
+  <slide id="4">
+    <description><![CDATA[
+    The content rich product display page was important to really showcase and educate about the individual products. The interesting difference to e-commerce being that the primary call to action is to help find the product in your local grocery store.
+    ]]></description>
+    <footnote><![CDATA[ Credits: Created while employed at <a href="http://www.copio.us/" target="_blank">Copious</a>.]]></footnote>
+    <title>PDP</title>
+    <image>pdp@2x.jpg</image>
+  </slide>
+</portfolio>

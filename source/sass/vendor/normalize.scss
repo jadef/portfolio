@@ -198,8 +198,8 @@ hr {
  */
 
 mark {
-    background: #ff0;
-    color: #000;
+    background: $c-yellow;
+    color: $c-black;
 }
 
 /**
@@ -370,7 +370,7 @@ form {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
+    border: 1px solid $c-gray-light;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
@@ -524,4 +524,16 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+
+// --------------------
+// Custom Resets
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }

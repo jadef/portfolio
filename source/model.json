@@ -1,0 +1,82 @@
+{
+  "projectname": "Jade Faist",
+  "description": {
+    "title": "",
+    "content": "<p>With over a decade of industry experience, I have learned that my most valuable contributions can be defined as <em>building</em> and <em>translating</em>.</p>\n<p>While applying logic and reason to every situation, a process-oriented mentality helps me translate user’s needs, designer choices, and code paths to build the right solution to practical problems.</p>"
+  },
+  "year": "2017",
+  "resume-link": "jadefaist-resume.pdf",
+
+
+  "position-primary": [{
+    "company": "Copious",
+    "title": "Senior UX Engineer",
+    "date": "February 2014 - February 2017",
+    "description": "Copious' work simplifies the complex, enriches the transactions a user has with their clients’ brands, and includes custom web applications, ecommerce experiences, and mobile apps. They focus on architecting, designing and building human-centered digital and ecommerce experiences.",
+    "responsibilities": [
+      "Front-end development",
+      "project estimating and planning",
+      "team management",
+      "technical leadership",
+      "code reviewing"
+    ],
+    "link": "<a href=\"//copio.us\" target=\"_blank\">copio.us</a>"
+  }],
+  "position": [{
+    "company": "Kinesis",
+    "title": "Senior Interactive",
+    "date": "January 2006 - January 2014",
+    "description": "Kinesis is a strategic marketing and design firm based in Portland, Oregon. They specialize in high-impact web design, graphic design, and marketing services for growth-oriented businesses.",
+    "responsibilities": [
+      "web programming",
+      "web design",
+      "UX",
+      "UI",
+      "process development",
+      "systems architecture"
+    ],
+    "link": "<a href=\"//www.kinesisinc.com\" target=\"_blank\">kinesisinc.com</a>"
+  },{
+    "company": "Jugtown Vinyl",
+    "title": "Co-founder",
+    "date": "September 2010 - January 2014",
+    "description": "Jugtown Vinyl is an online store that offers unique vinyl applique artwork directly to consumers.",
+    "responsibilities": [
+      "Online store creation and management",
+      "product management",
+      "business management"
+    ],
+    "link": ""
+  },{
+    "company": "Southern Oregon Bookstore",
+    "title": "Promotions Assistant",
+    "date": "June 2005 - July 2006",
+    "description": "Southern Oregon University’s university owned and operated college bookstore.",
+    "responsibilities": [
+      "Design of in-store and out-of-store graphics and promotions"
+    ],
+    "link": ""
+  }],
+
+
+  "proficiencies-a": [
+    "HTML 5",
+    "CSS / Sass",
+    "JavaScript",
+    "Jquery",
+    "Backbone",
+    "Guard, Grunt, Gulp",
+    "Magento <a href=\"http://www.magentocommerce.com/certification/directory/dev/1797242/\" target=\"_blank\">Certified</a>",
+    "WordPress",
+    "Expression Engine"
+  ],
+  "proficiencies-b": [
+    "Git / Github",
+    "Jira / Confluence",
+    "Photoshop",
+    "Illustrator",
+    "sketch",
+    "User Experience",
+    "Responsive Design &amp; Development"
+  ]
+}
