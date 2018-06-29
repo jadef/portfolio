@@ -7,8 +7,21 @@
   "year": "2017",
   "resume-link": "jadefaist-resume.pdf",
 
-
   "position-primary": [{
+    "company": "Icebreaker",
+    "title": "eCom Web Developer",
+    "date": "July 2017 - Present",
+    "description": "New Zealand started outdoor apparel company offering customers a natural alternative to synthetics through Merino wool. Offering product via wholesale, retail, and eCommerce. Joining the eCom team in Portland and later relocating the the Auckland office I was able to be part of this global group of people who want to make a difference, who share common beliefs and who have the courage to go their own way.",
+    "responsibilities": [
+      "development",
+      "system improvements",
+      "project organization",
+      "code review and management"
+    ],
+    "link": "<a href=\"//www.icebreaker.com\" target=\"_blank\">icebreaker.com</a>"
+  }],
+
+  "position": [{
     "company": "Copious",
     "title": "Senior UX Engineer",
     "date": "February 2014 - February 2017",
@@ -21,8 +34,7 @@
       "code reviewing"
     ],
     "link": "<a href=\"//copio.us\" target=\"_blank\">copio.us</a>"
-  }],
-  "position": [{
+  },{
     "company": "Kinesis",
     "title": "Senior Interactive",
     "date": "January 2006 - January 2014",
@@ -47,15 +59,6 @@
       "business management"
     ],
     "link": ""
-  },{
-    "company": "Southern Oregon Bookstore",
-    "title": "Promotions Assistant",
-    "date": "June 2005 - July 2006",
-    "description": "Southern Oregon University’s university owned and operated college bookstore.",
-    "responsibilities": [
-      "Design of in-store and out-of-store graphics and promotions"
-    ],
-    "link": ""
   }],
 
 
@@ -68,7 +71,7 @@
     "Guard, Grunt, Gulp",
     "Magento <a href=\"http://www.magentocommerce.com/certification/directory/dev/1797242/\" target=\"_blank\">Certified</a>",
     "WordPress",
-    "Expression Engine"
+    "Commerce Cloud (Demandware)"
   ],
   "proficiencies-b": [
     "Git / Github",
